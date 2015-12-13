@@ -14,6 +14,16 @@
 		C696A8901C1CFC75000333DA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C696A88E1C1CFC75000333DA /* LaunchScreen.storyboard */; };
 		C696A89B1C1CFC75000333DA /* ZHGameIOSTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C696A89A1C1CFC75000333DA /* ZHGameIOSTests.swift */; };
 		C696A8A61C1CFC75000333DA /* ZHGameIOSUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C696A8A51C1CFC75000333DA /* ZHGameIOSUITests.swift */; };
+		C696A8BA1C1CFC88000333DA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C696A8B91C1CFC88000333DA /* AppDelegate.swift */; };
+		C696A8BC1C1CFC88000333DA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C696A8BB1C1CFC88000333DA /* ViewController.swift */; };
+		C696A8BF1C1CFC88000333DA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C696A8BD1C1CFC88000333DA /* Main.storyboard */; };
+		C696A8C11C1CFC88000333DA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C696A8C01C1CFC88000333DA /* Assets.xcassets */; };
+		C696A8CC1C1CFC88000333DA /* ZHGameTVOSTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C696A8CB1C1CFC88000333DA /* ZHGameTVOSTests.swift */; };
+		C696A8D71C1CFC88000333DA /* ZHGameTVOSUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C696A8D61C1CFC88000333DA /* ZHGameTVOSUITests.swift */; };
+		C696A9CF1C1CFD53000333DA /* BonjourTCPClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = C696A9CD1C1CFD53000333DA /* BonjourTCPClient.swift */; };
+		C696A9D01C1CFD53000333DA /* BonjourTCPClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = C696A9CD1C1CFD53000333DA /* BonjourTCPClient.swift */; };
+		C696A9D11C1CFD53000333DA /* BonjourTCPServer.swift in Sources */ = {isa = PBXBuildFile; fileRef = C696A9CE1C1CFD53000333DA /* BonjourTCPServer.swift */; };
+		C696A9D21C1CFD53000333DA /* BonjourTCPServer.swift in Sources */ = {isa = PBXBuildFile; fileRef = C696A9CE1C1CFD53000333DA /* BonjourTCPServer.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -31,6 +41,20 @@
 			remoteGlobalIDString = C696A8811C1CFC75000333DA;
 			remoteInfo = ZHGameIOS;
 		};
+		C696A8C81C1CFC88000333DA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C696A87A1C1CFC75000333DA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C696A8B61C1CFC88000333DA;
+			remoteInfo = ZHGameTVOS;
+		};
+		C696A8D31C1CFC88000333DA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C696A87A1C1CFC75000333DA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C696A8B61C1CFC88000333DA;
+			remoteInfo = ZHGameTVOS;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
@@ -47,6 +71,20 @@
 		C696A8A11C1CFC75000333DA /* ZHGameIOSUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ZHGameIOSUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C696A8A51C1CFC75000333DA /* ZHGameIOSUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZHGameIOSUITests.swift; sourceTree = "<group>"; };
 		C696A8A71C1CFC75000333DA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C696A8B71C1CFC88000333DA /* ZHGameTVOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ZHGameTVOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		C696A8B91C1CFC88000333DA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		C696A8BB1C1CFC88000333DA /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		C696A8BE1C1CFC88000333DA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		C696A8C01C1CFC88000333DA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		C696A8C21C1CFC88000333DA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C696A8C71C1CFC88000333DA /* ZHGameTVOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ZHGameTVOSTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		C696A8CB1C1CFC88000333DA /* ZHGameTVOSTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZHGameTVOSTests.swift; sourceTree = "<group>"; };
+		C696A8CD1C1CFC88000333DA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C696A8D21C1CFC88000333DA /* ZHGameTVOSUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ZHGameTVOSUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		C696A8D61C1CFC88000333DA /* ZHGameTVOSUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZHGameTVOSUITests.swift; sourceTree = "<group>"; };
+		C696A8D81C1CFC88000333DA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C696A9CD1C1CFD53000333DA /* BonjourTCPClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BonjourTCPClient.swift; path = BonjourTCP/Shared/BonjourTCPClient.swift; sourceTree = "<group>"; };
+		C696A9CE1C1CFD53000333DA /* BonjourTCPServer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BonjourTCPServer.swift; path = BonjourTCP/Shared/BonjourTCPServer.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,15 +109,40 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		C696A8B41C1CFC88000333DA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C696A8C41C1CFC88000333DA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C696A8CF1C1CFC88000333DA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
 		C696A8791C1CFC75000333DA = {
 			isa = PBXGroup;
 			children = (
+				C696A8E21C1CFCD3000333DA /* ZHGameShared */,
 				C696A8841C1CFC75000333DA /* ZHGameIOS */,
 				C696A8991C1CFC75000333DA /* ZHGameIOSTests */,
 				C696A8A41C1CFC75000333DA /* ZHGameIOSUITests */,
+				C696A8B81C1CFC88000333DA /* ZHGameTVOS */,
+				C696A8CA1C1CFC88000333DA /* ZHGameTVOSTests */,
+				C696A8D51C1CFC88000333DA /* ZHGameTVOSUITests */,
 				C696A8831C1CFC75000333DA /* Products */,
 			);
 			sourceTree = "<group>";
@@ -90,6 +153,9 @@
 				C696A8821C1CFC75000333DA /* ZHGameIOS.app */,
 				C696A8961C1CFC75000333DA /* ZHGameIOSTests.xctest */,
 				C696A8A11C1CFC75000333DA /* ZHGameIOSUITests.xctest */,
+				C696A8B71C1CFC88000333DA /* ZHGameTVOS.app */,
+				C696A8C71C1CFC88000333DA /* ZHGameTVOSTests.xctest */,
+				C696A8D21C1CFC88000333DA /* ZHGameTVOSUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -123,6 +189,45 @@
 				C696A8A71C1CFC75000333DA /* Info.plist */,
 			);
 			path = ZHGameIOSUITests;
+			sourceTree = "<group>";
+		};
+		C696A8B81C1CFC88000333DA /* ZHGameTVOS */ = {
+			isa = PBXGroup;
+			children = (
+				C696A8B91C1CFC88000333DA /* AppDelegate.swift */,
+				C696A8BB1C1CFC88000333DA /* ViewController.swift */,
+				C696A8BD1C1CFC88000333DA /* Main.storyboard */,
+				C696A8C01C1CFC88000333DA /* Assets.xcassets */,
+				C696A8C21C1CFC88000333DA /* Info.plist */,
+			);
+			path = ZHGameTVOS;
+			sourceTree = "<group>";
+		};
+		C696A8CA1C1CFC88000333DA /* ZHGameTVOSTests */ = {
+			isa = PBXGroup;
+			children = (
+				C696A8CB1C1CFC88000333DA /* ZHGameTVOSTests.swift */,
+				C696A8CD1C1CFC88000333DA /* Info.plist */,
+			);
+			path = ZHGameTVOSTests;
+			sourceTree = "<group>";
+		};
+		C696A8D51C1CFC88000333DA /* ZHGameTVOSUITests */ = {
+			isa = PBXGroup;
+			children = (
+				C696A8D61C1CFC88000333DA /* ZHGameTVOSUITests.swift */,
+				C696A8D81C1CFC88000333DA /* Info.plist */,
+			);
+			path = ZHGameTVOSUITests;
+			sourceTree = "<group>";
+		};
+		C696A8E21C1CFCD3000333DA /* ZHGameShared */ = {
+			isa = PBXGroup;
+			children = (
+				C696A9CD1C1CFD53000333DA /* BonjourTCPClient.swift */,
+				C696A9CE1C1CFD53000333DA /* BonjourTCPServer.swift */,
+			);
+			path = ZHGameShared;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -181,6 +286,59 @@
 			productReference = C696A8A11C1CFC75000333DA /* ZHGameIOSUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
+		C696A8B61C1CFC88000333DA /* ZHGameTVOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C696A8D91C1CFC88000333DA /* Build configuration list for PBXNativeTarget "ZHGameTVOS" */;
+			buildPhases = (
+				C696A8B31C1CFC88000333DA /* Sources */,
+				C696A8B41C1CFC88000333DA /* Frameworks */,
+				C696A8B51C1CFC88000333DA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ZHGameTVOS;
+			productName = ZHGameTVOS;
+			productReference = C696A8B71C1CFC88000333DA /* ZHGameTVOS.app */;
+			productType = "com.apple.product-type.application";
+		};
+		C696A8C61C1CFC88000333DA /* ZHGameTVOSTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C696A8DC1C1CFC88000333DA /* Build configuration list for PBXNativeTarget "ZHGameTVOSTests" */;
+			buildPhases = (
+				C696A8C31C1CFC88000333DA /* Sources */,
+				C696A8C41C1CFC88000333DA /* Frameworks */,
+				C696A8C51C1CFC88000333DA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				C696A8C91C1CFC88000333DA /* PBXTargetDependency */,
+			);
+			name = ZHGameTVOSTests;
+			productName = ZHGameTVOSTests;
+			productReference = C696A8C71C1CFC88000333DA /* ZHGameTVOSTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		C696A8D11C1CFC88000333DA /* ZHGameTVOSUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C696A8DF1C1CFC88000333DA /* Build configuration list for PBXNativeTarget "ZHGameTVOSUITests" */;
+			buildPhases = (
+				C696A8CE1C1CFC88000333DA /* Sources */,
+				C696A8CF1C1CFC88000333DA /* Frameworks */,
+				C696A8D01C1CFC88000333DA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				C696A8D41C1CFC88000333DA /* PBXTargetDependency */,
+			);
+			name = ZHGameTVOSUITests;
+			productName = ZHGameTVOSUITests;
+			productReference = C696A8D21C1CFC88000333DA /* ZHGameTVOSUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -202,6 +360,17 @@
 						CreatedOnToolsVersion = 7.2;
 						TestTargetID = C696A8811C1CFC75000333DA;
 					};
+					C696A8B61C1CFC88000333DA = {
+						CreatedOnToolsVersion = 7.2;
+					};
+					C696A8C61C1CFC88000333DA = {
+						CreatedOnToolsVersion = 7.2;
+						TestTargetID = C696A8B61C1CFC88000333DA;
+					};
+					C696A8D11C1CFC88000333DA = {
+						CreatedOnToolsVersion = 7.2;
+						TestTargetID = C696A8B61C1CFC88000333DA;
+					};
 				};
 			};
 			buildConfigurationList = C696A87D1C1CFC75000333DA /* Build configuration list for PBXProject "ZHGameIOS" */;
@@ -220,6 +389,9 @@
 				C696A8811C1CFC75000333DA /* ZHGameIOS */,
 				C696A8951C1CFC75000333DA /* ZHGameIOSTests */,
 				C696A8A01C1CFC75000333DA /* ZHGameIOSUITests */,
+				C696A8B61C1CFC88000333DA /* ZHGameTVOS */,
+				C696A8C61C1CFC88000333DA /* ZHGameTVOSTests */,
+				C696A8D11C1CFC88000333DA /* ZHGameTVOSUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -249,6 +421,29 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		C696A8B51C1CFC88000333DA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C696A8C11C1CFC88000333DA /* Assets.xcassets in Resources */,
+				C696A8BF1C1CFC88000333DA /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C696A8C51C1CFC88000333DA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C696A8D01C1CFC88000333DA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -257,6 +452,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				C696A8881C1CFC75000333DA /* ViewController.swift in Sources */,
+				C696A9CF1C1CFD53000333DA /* BonjourTCPClient.swift in Sources */,
+				C696A9D11C1CFD53000333DA /* BonjourTCPServer.swift in Sources */,
 				C696A8861C1CFC75000333DA /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -277,6 +474,33 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		C696A8B31C1CFC88000333DA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C696A8BC1C1CFC88000333DA /* ViewController.swift in Sources */,
+				C696A9D01C1CFD53000333DA /* BonjourTCPClient.swift in Sources */,
+				C696A9D21C1CFD53000333DA /* BonjourTCPServer.swift in Sources */,
+				C696A8BA1C1CFC88000333DA /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C696A8C31C1CFC88000333DA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C696A8CC1C1CFC88000333DA /* ZHGameTVOSTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C696A8CE1C1CFC88000333DA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C696A8D71C1CFC88000333DA /* ZHGameTVOSUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -289,6 +513,16 @@
 			isa = PBXTargetDependency;
 			target = C696A8811C1CFC75000333DA /* ZHGameIOS */;
 			targetProxy = C696A8A21C1CFC75000333DA /* PBXContainerItemProxy */;
+		};
+		C696A8C91C1CFC88000333DA /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C696A8B61C1CFC88000333DA /* ZHGameTVOS */;
+			targetProxy = C696A8C81C1CFC88000333DA /* PBXContainerItemProxy */;
+		};
+		C696A8D41C1CFC88000333DA /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C696A8B61C1CFC88000333DA /* ZHGameTVOS */;
+			targetProxy = C696A8D31C1CFC88000333DA /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -307,6 +541,14 @@
 				C696A88F1C1CFC75000333DA /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		C696A8BD1C1CFC88000333DA /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C696A8BE1C1CFC88000333DA /* Base */,
+			);
+			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -400,6 +642,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = ZHGameIOS/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.vaporwarewolf.ZHGameIOS;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -411,6 +654,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = ZHGameIOS/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.vaporwarewolf.ZHGameIOS;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -465,6 +709,92 @@
 			};
 			name = Release;
 		};
+		C696A8DA1C1CFC88000333DA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = "App Icon & Top Shelf Image";
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				INFOPLIST_FILE = ZHGameTVOS/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.vaporwarewolf.ZHGameTVOS;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = appletvos;
+				TARGETED_DEVICE_FAMILY = 3;
+				TVOS_DEPLOYMENT_TARGET = 9.0;
+			};
+			name = Debug;
+		};
+		C696A8DB1C1CFC88000333DA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = "App Icon & Top Shelf Image";
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				INFOPLIST_FILE = ZHGameTVOS/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.vaporwarewolf.ZHGameTVOS;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = appletvos;
+				TARGETED_DEVICE_FAMILY = 3;
+				TVOS_DEPLOYMENT_TARGET = 9.0;
+			};
+			name = Release;
+		};
+		C696A8DD1C1CFC88000333DA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = ZHGameTVOSTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.vaporwarewolf.ZHGameTVOSTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = appletvos;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ZHGameTVOS.app/ZHGameTVOS";
+				TVOS_DEPLOYMENT_TARGET = 9.1;
+			};
+			name = Debug;
+		};
+		C696A8DE1C1CFC88000333DA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = ZHGameTVOSTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.vaporwarewolf.ZHGameTVOSTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = appletvos;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ZHGameTVOS.app/ZHGameTVOS";
+				TVOS_DEPLOYMENT_TARGET = 9.1;
+			};
+			name = Release;
+		};
+		C696A8E01C1CFC88000333DA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = ZHGameTVOSUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.vaporwarewolf.ZHGameTVOSUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = appletvos;
+				TEST_TARGET_NAME = ZHGameTVOS;
+				TVOS_DEPLOYMENT_TARGET = 9.1;
+				USES_XCTRUNNER = YES;
+			};
+			name = Debug;
+		};
+		C696A8E11C1CFC88000333DA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = ZHGameTVOSUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.vaporwarewolf.ZHGameTVOSUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = appletvos;
+				TEST_TARGET_NAME = ZHGameTVOS;
+				TVOS_DEPLOYMENT_TARGET = 9.1;
+				USES_XCTRUNNER = YES;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -484,6 +814,7 @@
 				C696A8AC1C1CFC75000333DA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		C696A8AD1C1CFC75000333DA /* Build configuration list for PBXNativeTarget "ZHGameIOSTests" */ = {
 			isa = XCConfigurationList;
@@ -492,6 +823,7 @@
 				C696A8AF1C1CFC75000333DA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		C696A8B01C1CFC75000333DA /* Build configuration list for PBXNativeTarget "ZHGameIOSUITests" */ = {
 			isa = XCConfigurationList;
@@ -500,6 +832,34 @@
 				C696A8B21C1CFC75000333DA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C696A8D91C1CFC88000333DA /* Build configuration list for PBXNativeTarget "ZHGameTVOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C696A8DA1C1CFC88000333DA /* Debug */,
+				C696A8DB1C1CFC88000333DA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C696A8DC1C1CFC88000333DA /* Build configuration list for PBXNativeTarget "ZHGameTVOSTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C696A8DD1C1CFC88000333DA /* Debug */,
+				C696A8DE1C1CFC88000333DA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C696A8DF1C1CFC88000333DA /* Build configuration list for PBXNativeTarget "ZHGameTVOSUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C696A8E01C1CFC88000333DA /* Debug */,
+				C696A8E11C1CFC88000333DA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

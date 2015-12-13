@@ -1,0 +1,637 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		1666D4011BD03D7F00AAD13E /* CocoaAsyncSocket.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1666D4001BD03D7F00AAD13E /* CocoaAsyncSocket.framework */; };
+		1666D4021BD03D7F00AAD13E /* CocoaAsyncSocket.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1666D4001BD03D7F00AAD13E /* CocoaAsyncSocket.framework */; };
+		1666D4041BD03D8800AAD13E /* CocoaAsyncSocket.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1666D4031BD03D8800AAD13E /* CocoaAsyncSocket.framework */; };
+		16F5EA721BD0328000849E88 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16F5EA711BD0328000849E88 /* AppDelegate.swift */; };
+		16F5EA741BD0328000849E88 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16F5EA731BD0328000849E88 /* ViewController.swift */; };
+		16F5EA761BD0328000849E88 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 16F5EA751BD0328000849E88 /* Assets.xcassets */; };
+		16F5EA791BD0328000849E88 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 16F5EA771BD0328000849E88 /* Main.storyboard */; };
+		16F5EA851BD0328800849E88 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16F5EA841BD0328800849E88 /* AppDelegate.swift */; };
+		16F5EA871BD0328800849E88 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16F5EA861BD0328800849E88 /* ViewController.swift */; };
+		16F5EA8A1BD0328800849E88 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 16F5EA881BD0328800849E88 /* Main.storyboard */; };
+		16F5EA8C1BD0328800849E88 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 16F5EA8B1BD0328800849E88 /* Assets.xcassets */; };
+		16F5EA9A1BD0329600849E88 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16F5EA921BD0329600849E88 /* AppDelegate.swift */; };
+		16F5EA9B1BD0329600849E88 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 16F5EA931BD0329600849E88 /* Assets.xcassets */; };
+		16F5EA9C1BD0329600849E88 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 16F5EA941BD0329600849E88 /* LaunchScreen.storyboard */; };
+		16F5EA9D1BD0329600849E88 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 16F5EA961BD0329600849E88 /* Main.storyboard */; };
+		16F5EA9F1BD0329600849E88 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16F5EA991BD0329600849E88 /* ViewController.swift */; };
+		16F5EAAC1BD0365300849E88 /* BonjourUDPClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16F5EAAA1BD0365300849E88 /* BonjourUDPClient.swift */; };
+		16F5EAAD1BD0365300849E88 /* BonjourUDPClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16F5EAAA1BD0365300849E88 /* BonjourUDPClient.swift */; };
+		16F5EAAE1BD0365300849E88 /* BonjourUDPClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16F5EAAA1BD0365300849E88 /* BonjourUDPClient.swift */; };
+		16F5EAAF1BD0365300849E88 /* BonjourUDPServer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16F5EAAB1BD0365300849E88 /* BonjourUDPServer.swift */; };
+		16F5EAB01BD0365300849E88 /* BonjourUDPServer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16F5EAAB1BD0365300849E88 /* BonjourUDPServer.swift */; };
+		16F5EAB11BD0365300849E88 /* BonjourUDPServer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16F5EAAB1BD0365300849E88 /* BonjourUDPServer.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		1666D4001BD03D7F00AAD13E /* CocoaAsyncSocket.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CocoaAsyncSocket.framework; path = Carthage/Build/iOS/CocoaAsyncSocket.framework; sourceTree = "<group>"; };
+		1666D4031BD03D8800AAD13E /* CocoaAsyncSocket.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CocoaAsyncSocket.framework; path = Carthage/Build/Mac/CocoaAsyncSocket.framework; sourceTree = "<group>"; };
+		16F5EA561BD0326700849E88 /* iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		16F5EA6F1BD0328000849E88 /* OSX.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OSX.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		16F5EA711BD0328000849E88 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		16F5EA731BD0328000849E88 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		16F5EA751BD0328000849E88 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		16F5EA781BD0328000849E88 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		16F5EA7A1BD0328000849E88 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		16F5EA821BD0328800849E88 /* tvOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = tvOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		16F5EA841BD0328800849E88 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		16F5EA861BD0328800849E88 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		16F5EA891BD0328800849E88 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		16F5EA8B1BD0328800849E88 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		16F5EA8D1BD0328800849E88 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		16F5EA921BD0329600849E88 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		16F5EA931BD0329600849E88 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		16F5EA951BD0329600849E88 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		16F5EA971BD0329600849E88 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		16F5EA981BD0329600849E88 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		16F5EA991BD0329600849E88 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		16F5EAAA1BD0365300849E88 /* BonjourUDPClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BonjourUDPClient.swift; sourceTree = "<group>"; };
+		16F5EAAB1BD0365300849E88 /* BonjourUDPServer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BonjourUDPServer.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		16F5EA531BD0326700849E88 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1666D4011BD03D7F00AAD13E /* CocoaAsyncSocket.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		16F5EA6C1BD0328000849E88 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1666D4041BD03D8800AAD13E /* CocoaAsyncSocket.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		16F5EA7F1BD0328800849E88 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1666D4021BD03D7F00AAD13E /* CocoaAsyncSocket.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		16F5EA4D1BD0326700849E88 = {
+			isa = PBXGroup;
+			children = (
+				1666D4031BD03D8800AAD13E /* CocoaAsyncSocket.framework */,
+				1666D4001BD03D7F00AAD13E /* CocoaAsyncSocket.framework */,
+				16F5EAA01BD032B400849E88 /* Shared */,
+				16F5EA911BD0329600849E88 /* iOS */,
+				16F5EA701BD0328000849E88 /* OSX */,
+				16F5EA831BD0328800849E88 /* tvOS */,
+				16F5EA571BD0326700849E88 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		16F5EA571BD0326700849E88 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				16F5EA561BD0326700849E88 /* iOS.app */,
+				16F5EA6F1BD0328000849E88 /* OSX.app */,
+				16F5EA821BD0328800849E88 /* tvOS.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		16F5EA701BD0328000849E88 /* OSX */ = {
+			isa = PBXGroup;
+			children = (
+				16F5EA711BD0328000849E88 /* AppDelegate.swift */,
+				16F5EA731BD0328000849E88 /* ViewController.swift */,
+				16F5EA751BD0328000849E88 /* Assets.xcassets */,
+				16F5EA771BD0328000849E88 /* Main.storyboard */,
+				16F5EA7A1BD0328000849E88 /* Info.plist */,
+			);
+			path = OSX;
+			sourceTree = "<group>";
+		};
+		16F5EA831BD0328800849E88 /* tvOS */ = {
+			isa = PBXGroup;
+			children = (
+				16F5EA841BD0328800849E88 /* AppDelegate.swift */,
+				16F5EA861BD0328800849E88 /* ViewController.swift */,
+				16F5EA881BD0328800849E88 /* Main.storyboard */,
+				16F5EA8B1BD0328800849E88 /* Assets.xcassets */,
+				16F5EA8D1BD0328800849E88 /* Info.plist */,
+			);
+			path = tvOS;
+			sourceTree = "<group>";
+		};
+		16F5EA911BD0329600849E88 /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				16F5EA921BD0329600849E88 /* AppDelegate.swift */,
+				16F5EA991BD0329600849E88 /* ViewController.swift */,
+				16F5EA931BD0329600849E88 /* Assets.xcassets */,
+				16F5EA941BD0329600849E88 /* LaunchScreen.storyboard */,
+				16F5EA961BD0329600849E88 /* Main.storyboard */,
+				16F5EA981BD0329600849E88 /* Info.plist */,
+			);
+			path = iOS;
+			sourceTree = "<group>";
+		};
+		16F5EAA01BD032B400849E88 /* Shared */ = {
+			isa = PBXGroup;
+			children = (
+				16F5EAAB1BD0365300849E88 /* BonjourUDPServer.swift */,
+				16F5EAAA1BD0365300849E88 /* BonjourUDPClient.swift */,
+			);
+			path = Shared;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		16F5EA551BD0326700849E88 /* iOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 16F5EA681BD0326700849E88 /* Build configuration list for PBXNativeTarget "iOS" */;
+			buildPhases = (
+				16F5EA521BD0326700849E88 /* Sources */,
+				16F5EA531BD0326700849E88 /* Frameworks */,
+				16F5EA541BD0326700849E88 /* Resources */,
+				16F5EAA11BD034B100849E88 /* Carthage */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = iOS;
+			productName = BonjourUDP;
+			productReference = 16F5EA561BD0326700849E88 /* iOS.app */;
+			productType = "com.apple.product-type.application";
+		};
+		16F5EA6E1BD0328000849E88 /* OSX */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 16F5EA7B1BD0328000849E88 /* Build configuration list for PBXNativeTarget "OSX" */;
+			buildPhases = (
+				16F5EA6B1BD0328000849E88 /* Sources */,
+				16F5EA6C1BD0328000849E88 /* Frameworks */,
+				16F5EA6D1BD0328000849E88 /* Resources */,
+				16F5EAA91BD0350B00849E88 /* Carthage */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = OSX;
+			productName = OSX;
+			productReference = 16F5EA6F1BD0328000849E88 /* OSX.app */;
+			productType = "com.apple.product-type.application";
+		};
+		16F5EA811BD0328800849E88 /* tvOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 16F5EA8E1BD0328800849E88 /* Build configuration list for PBXNativeTarget "tvOS" */;
+			buildPhases = (
+				16F5EA7E1BD0328800849E88 /* Sources */,
+				16F5EA7F1BD0328800849E88 /* Frameworks */,
+				16F5EA801BD0328800849E88 /* Resources */,
+				16F5EAA81BD0350200849E88 /* Carthage */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = tvOS;
+			productName = tvOS;
+			productReference = 16F5EA821BD0328800849E88 /* tvOS.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		16F5EA4E1BD0326700849E88 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0710;
+				LastUpgradeCheck = 0710;
+				ORGANIZATIONNAME = "Tibor Bodecs";
+				TargetAttributes = {
+					16F5EA551BD0326700849E88 = {
+						CreatedOnToolsVersion = 7.1;
+					};
+					16F5EA6E1BD0328000849E88 = {
+						CreatedOnToolsVersion = 7.1;
+					};
+					16F5EA811BD0328800849E88 = {
+						CreatedOnToolsVersion = 7.1;
+					};
+				};
+			};
+			buildConfigurationList = 16F5EA511BD0326700849E88 /* Build configuration list for PBXProject "BonjourUDP" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 16F5EA4D1BD0326700849E88;
+			productRefGroup = 16F5EA571BD0326700849E88 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				16F5EA551BD0326700849E88 /* iOS */,
+				16F5EA6E1BD0328000849E88 /* OSX */,
+				16F5EA811BD0328800849E88 /* tvOS */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		16F5EA541BD0326700849E88 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				16F5EA9D1BD0329600849E88 /* Main.storyboard in Resources */,
+				16F5EA9B1BD0329600849E88 /* Assets.xcassets in Resources */,
+				16F5EA9C1BD0329600849E88 /* LaunchScreen.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		16F5EA6D1BD0328000849E88 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				16F5EA761BD0328000849E88 /* Assets.xcassets in Resources */,
+				16F5EA791BD0328000849E88 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		16F5EA801BD0328800849E88 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				16F5EA8C1BD0328800849E88 /* Assets.xcassets in Resources */,
+				16F5EA8A1BD0328800849E88 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		16F5EAA11BD034B100849E88 /* Carthage */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/Carthage/Build/iOS/CocoaAsyncSocket.framework",
+			);
+			name = Carthage;
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = "/usr/local/bin/carthage copy-frameworks";
+			shellScript = "";
+		};
+		16F5EAA81BD0350200849E88 /* Carthage */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/Carthage/Build/iOS/CocoaAsyncSocket.framework",
+			);
+			name = Carthage;
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = "/usr/local/bin/carthage copy-frameworks";
+			shellScript = "";
+		};
+		16F5EAA91BD0350B00849E88 /* Carthage */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/Carthage/Build/Mac/CocoaAsyncSocket.framework",
+			);
+			name = Carthage;
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = "/usr/local/bin/carthage copy-frameworks";
+			shellScript = "";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		16F5EA521BD0326700849E88 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				16F5EAAF1BD0365300849E88 /* BonjourUDPServer.swift in Sources */,
+				16F5EA9F1BD0329600849E88 /* ViewController.swift in Sources */,
+				16F5EAAC1BD0365300849E88 /* BonjourUDPClient.swift in Sources */,
+				16F5EA9A1BD0329600849E88 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		16F5EA6B1BD0328000849E88 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				16F5EAB01BD0365300849E88 /* BonjourUDPServer.swift in Sources */,
+				16F5EA741BD0328000849E88 /* ViewController.swift in Sources */,
+				16F5EAAD1BD0365300849E88 /* BonjourUDPClient.swift in Sources */,
+				16F5EA721BD0328000849E88 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		16F5EA7E1BD0328800849E88 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				16F5EAB11BD0365300849E88 /* BonjourUDPServer.swift in Sources */,
+				16F5EA871BD0328800849E88 /* ViewController.swift in Sources */,
+				16F5EAAE1BD0365300849E88 /* BonjourUDPClient.swift in Sources */,
+				16F5EA851BD0328800849E88 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		16F5EA771BD0328000849E88 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				16F5EA781BD0328000849E88 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		16F5EA881BD0328800849E88 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				16F5EA891BD0328800849E88 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		16F5EA941BD0329600849E88 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				16F5EA951BD0329600849E88 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		16F5EA961BD0329600849E88 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				16F5EA971BD0329600849E88 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		16F5EA661BD0326700849E88 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		16F5EA671BD0326700849E88 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		16F5EA691BD0326700849E88 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
+				INFOPLIST_FILE = "$(SRCROOT)/iOS/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.tiborbodecs.BonjourUDP;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		16F5EA6A1BD0326700849E88 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
+				INFOPLIST_FILE = "$(SRCROOT)/iOS/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.tiborbodecs.BonjourUDP;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		16F5EA7C1BD0328000849E88 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "-";
+				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/Mac",
+				);
+				INFOPLIST_FILE = OSX/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				PRODUCT_BUNDLE_IDENTIFIER = com.tiborbodecs.OSX;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		16F5EA7D1BD0328000849E88 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "-";
+				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/Mac",
+				);
+				INFOPLIST_FILE = OSX/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				PRODUCT_BUNDLE_IDENTIFIER = com.tiborbodecs.OSX;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		16F5EA8F1BD0328800849E88 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = "App Icon & Top Shelf Image";
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
+				INFOPLIST_FILE = tvOS/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.tiborbodecs.tvOS;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = appletvos;
+				TARGETED_DEVICE_FAMILY = 3;
+				TVOS_DEPLOYMENT_TARGET = 9.0;
+			};
+			name = Debug;
+		};
+		16F5EA901BD0328800849E88 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = "App Icon & Top Shelf Image";
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
+				INFOPLIST_FILE = tvOS/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.tiborbodecs.tvOS;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = appletvos;
+				TARGETED_DEVICE_FAMILY = 3;
+				TVOS_DEPLOYMENT_TARGET = 9.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		16F5EA511BD0326700849E88 /* Build configuration list for PBXProject "BonjourUDP" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				16F5EA661BD0326700849E88 /* Debug */,
+				16F5EA671BD0326700849E88 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		16F5EA681BD0326700849E88 /* Build configuration list for PBXNativeTarget "iOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				16F5EA691BD0326700849E88 /* Debug */,
+				16F5EA6A1BD0326700849E88 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		16F5EA7B1BD0328000849E88 /* Build configuration list for PBXNativeTarget "OSX" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				16F5EA7C1BD0328000849E88 /* Debug */,
+				16F5EA7D1BD0328000849E88 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		16F5EA8E1BD0328800849E88 /* Build configuration list for PBXNativeTarget "tvOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				16F5EA8F1BD0328800849E88 /* Debug */,
+				16F5EA901BD0328800849E88 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 16F5EA4E1BD0326700849E88 /* Project object */;
+}
