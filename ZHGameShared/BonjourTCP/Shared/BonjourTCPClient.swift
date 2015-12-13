@@ -13,7 +13,8 @@ import Foundation
 class BonjourTCPClient : NSObject, NSNetServiceBrowserDelegate, NSStreamDelegate
 {
 	
-	let kServiceType = "_myservice._tcp."
+//	let kServiceType = "_myservice._tcp."
+    let kServiceType = "_vaporwarewolf_service._tcp."
 	
 	///////////////////////////////////////////////////////////////////////////////////////////////////
 	//  MARK: init
@@ -182,6 +183,7 @@ class BonjourTCPClient : NSObject, NSNetServiceBrowserDelegate, NSStreamDelegate
 		}
 		NSLog("data written... \(message)")
 	}
+    
 	
 	
 }

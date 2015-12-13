@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C681653F1C1D363A00E026EE /* ZHUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = C681653E1C1D363A00E026EE /* ZHUser.swift */; };
 		C696A8861C1CFC75000333DA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C696A8851C1CFC75000333DA /* AppDelegate.swift */; };
 		C696A8881C1CFC75000333DA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C696A8871C1CFC75000333DA /* ViewController.swift */; };
 		C696A88B1C1CFC75000333DA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C696A8891C1CFC75000333DA /* Main.storyboard */; };
@@ -58,6 +59,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		C681653E1C1D363A00E026EE /* ZHUser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZHUser.swift; sourceTree = "<group>"; };
 		C696A8821C1CFC75000333DA /* ZHGameIOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ZHGameIOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C696A8851C1CFC75000333DA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C696A8871C1CFC75000333DA /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -226,6 +228,7 @@
 			children = (
 				C696A9CD1C1CFD53000333DA /* BonjourTCPClient.swift */,
 				C696A9CE1C1CFD53000333DA /* BonjourTCPServer.swift */,
+				C681653E1C1D363A00E026EE /* ZHUser.swift */,
 			);
 			path = ZHGameShared;
 			sourceTree = "<group>";
@@ -453,6 +456,7 @@
 			files = (
 				C696A8881C1CFC75000333DA /* ViewController.swift in Sources */,
 				C696A9CF1C1CFD53000333DA /* BonjourTCPClient.swift in Sources */,
+				C681653F1C1D363A00E026EE /* ZHUser.swift in Sources */,
 				C696A9D11C1CFD53000333DA /* BonjourTCPServer.swift in Sources */,
 				C696A8861C1CFC75000333DA /* AppDelegate.swift in Sources */,
 			);

@@ -21,7 +21,8 @@ import Foundation
 class BonjourTCPServer : NSObject, NSNetServiceDelegate, NSStreamDelegate
 {
 
-	let kWiTapBonjourType = "_myservice._tcp."
+//	let kWiTapBonjourType = "_myservice._tcp."
+    let kWiTapBonjourType = "_vaporwarewolf_service._tcp."
 
 	///////////////////////////////////////////////////////////////////////////////////////////////////
 	//  MARK: init
@@ -129,9 +130,8 @@ class BonjourTCPServer : NSObject, NSNetServiceDelegate, NSStreamDelegate
 	
 
 	///////////////////////////////////////////////////////////////////////////////////////////////////
-	//  MARK: nsstream delegate
+	//  MARK: NSStreamDelegate
 	///////////////////////////////////////////////////////////////////////////////////////////////////
-
 	var dataReceivedCallback : ((String) -> ())? = nil
 	func stream(aStream: NSStream, handleEvent eventCode: NSStreamEvent) {
 
