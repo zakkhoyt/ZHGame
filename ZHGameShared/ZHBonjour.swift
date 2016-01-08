@@ -145,6 +145,10 @@ class ZHBonjour : NSObject {
             return NSLog("no space available")
         }
         
+        while self.outputStream!.hasSpaceAvailable == false {
+            print("wasting time")
+        }
+        
         let data: NSData = message.dataUsingEncoding(NSUTF8StringEncoding)!
         let bytesWritten = self.outputStream!.write(UnsafePointer<UInt8>(data.bytes), maxLength: data.length)
         
@@ -290,12 +294,12 @@ extension ZHBonjour: NSNetServiceBrowserDelegate {
     
     func netServiceBrowser(browser: NSNetServiceBrowser, didRemoveService service: NSNetService, moreComing: Bool) {
         NSLog("service removed:" + service.name)
-        self.services = self.services.filter() { $0 != service }
-        
-        if !moreComing {
-            if let callback = self.servicesCallback {
-                callback(self.services)
-            }
-        }
+//        self.services = self.services.filter() { $0 != service }
+//        
+//        if !moreComing {
+//            if let callback = self.servicesCallback {
+//                callback(self.services)
+//            }
+//        }
     }
 }

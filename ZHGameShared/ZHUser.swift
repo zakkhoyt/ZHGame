@@ -32,7 +32,7 @@ class ZHUser: NSObject {
         return nil
     }
     
-    init(jsonString: String) {
+    init?(jsonString: String) {
         super.init()
         
 
@@ -47,9 +47,12 @@ class ZHUser: NSObject {
                 if let uuid = jsonDictionary["uuid"] {
                     self.uuid = uuid as? String
                 }
+            } else {
+                return nil
             }
         } catch _ {
             print("Error converting string to data to json dictionary")
+            return nil
         }
     }
     override init(){

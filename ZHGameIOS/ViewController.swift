@@ -52,7 +52,7 @@ class ViewController: UIViewController {
     }
     
     func appendClientReceive(message: String) {
-        clientReceiveTextView.text = message + "\n" + serverReceiveTextView.text
+        clientReceiveTextView.text = "*** " +  message + "\n" + clientReceiveTextView.text
         print(message)
     }
     
@@ -113,13 +113,17 @@ class ViewController: UIViewController {
             })
         }
         ZHBonjour.sharedInstance.dataReceivedCallback = {(data: String) in
-            self.appendClientReceive(data)
+            self.appendClientReceive("received: " + data)
         }
 
         
         ZHBonjour.sharedInstance.startClient()
         
 
+    }
+    @IBAction func clientSendButtonTouchUpInside(sender: UIButton!) {
+        self.appendClientReceive("sending: " + self.clientSendMessageTextField.text!)
+        ZHBonjour.sharedInstance.send(self.clientSendMessageTextField.text!)
     }
 
 }
