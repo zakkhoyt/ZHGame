@@ -18,45 +18,24 @@ class ViewController: NSViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-//        BonjourTCPServer.sharedInstance.dataReceivedCallback = {(data: String) in
-//            print("Received: \(data)")
-//            let user = ZHUser(jsonString: data)
-//            self.appendServerReceive("sent user data: \n" + user.description)
-//
-////            self.users.append(user)
-////            self.collectionView.reloadData()
-//            
-////            BonjourTCPServer.sharedInstance.send("Closed loop");
-//        }
-        
-        ZHBonjour.sharedInstance.dataReceivedCallback = {(data: String) in
-            print("Received: \(data)")
+        BonjourTCPServer.sharedInstance.dataReceivedCallback = {(data: String) in
+            
+            // If user, parse. If not display
             let user: ZHUser? = ZHUser(jsonString: data)
             if let user = user {
-                self.appendServerReceive("received user data: \n" + user.description)
+                self.appendServerReceive("received: " + user.description)
             } else {
-                self.appendServerReceive(data)
+                self.appendServerReceive("received: " + data)
             }
             
-            
+            // Send reply
             let delayTime = dispatch_time(DISPATCH_TIME_NOW, Int64(0.05 * Double(NSEC_PER_SEC)))
             dispatch_after(delayTime, dispatch_get_main_queue()) {
-                self.appendServerReceive("received: " + data)
                 self.appendServerReceive("sending: echo " + data)
-                ZHBonjour.sharedInstance.send("sending: echo " + data)
+                BonjourTCPServer.sharedInstance.send("sending: echo " + data)
             }
         }
-        
-        ZHBonjour.sharedInstance.startServer()
-        
     }
-
-    override var representedObject: AnyObject? {
-        didSet {
-        // Update the view, if already loaded.
-        }
-    }
-    
     
     func appendServerReceive(message: String) {
         self.clientsTextView.string = "*** " +  message + "\n" + self.clientsTextView.string!

@@ -9,7 +9,6 @@
 import UIKit
 
 class ViewController: UIViewController {
-    @IBOutlet var clientsTextView: NSTextView!
     @IBOutlet weak var statusLabel: UILabel!
     @IBOutlet weak var clientsLabel: UILabel!
     @IBOutlet weak var collectionView: UICollectionView!
@@ -23,11 +22,10 @@ class ViewController: UIViewController {
         
         BonjourTCPServer.sharedInstance.dataReceivedCallback = {(data: String) in
             NSLog("Received: \(data)")
-            let user = ZHUser(jsonString: data)
-            self.users.append(user)
-            self.collectionView.reloadData()
-            
-//            BonjourTCPServer.sharedInstance.send("Closed loop");
+            if let user = ZHUser(jsonString: data){
+                self.users.append(user)
+                self.collectionView.reloadData()
+            }
         }
     }
     
@@ -42,7 +40,6 @@ class ViewController: UIViewController {
 extension ViewController: UICollectionViewDataSource {
     func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return users.count
-        @IBOutlet weak var clientView: UIView!
     }
     
     func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {

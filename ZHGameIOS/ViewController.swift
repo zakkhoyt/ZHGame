@@ -61,69 +61,43 @@ class ViewController: UIViewController {
         serverButton.hidden = true
         clientButton.hidden = true
 
-//        // Find services (servers)
-//        self.appendClientReceive("Beginning search for services...")
-//        BonjourTCPClient.sharedInstance.servicesCallback = { (services) in
-//            guard let service = services.first else {
-//                self.appendClientReceive("No services available")
-//                return
-//            }
-//            
-//            self.appendClientReceive("Connecting to: \(service.name)")
-//
-//            
-//            // Connect to server
-//            BonjourTCPClient.sharedInstance.connectTo(service, callback: {
-//                let user = ZHUser()
-//                user.uuid = self.uuidTextField.text
-//                user.username = self.usernameTextField.text
-//                let userJSON = user.jsonRepresentation()
-//                if let userJSON = userJSON  {
-//                    // Send message to server
-//                    BonjourTCPClient.sharedInstance.send(userJSON)
-//                } else {
-//                    self.appendClientReceive("Can't sent JSON string: ")
-//                }
-//            })
-//        }
-        
         // Find services (servers)
         self.appendClientReceive("Beginning search for services...")
-        ZHBonjour.sharedInstance.servicesCallback = { (services) in
+        BonjourTCPClient.sharedInstance.servicesCallback = { (services) in
             guard let service = services.first else {
                 self.appendClientReceive("No services available")
                 return
             }
             
             self.appendClientReceive("Connecting to: \(service.name)")
-            
+
             
             // Connect to server
-            ZHBonjour.sharedInstance.connectTo(service, callback: {
+            BonjourTCPClient.sharedInstance.connectTo(service, callback: {
+                self.appendClientReceive("Connected to: \(service.name)")
+                
                 let user = ZHUser()
                 user.uuid = self.uuidTextField.text
                 user.username = self.usernameTextField.text
                 let userJSON = user.jsonRepresentation()
                 if let userJSON = userJSON  {
                     // Send message to server
-                    ZHBonjour.sharedInstance.send(userJSON)
+                    self.appendClientReceive("Sending: " + userJSON)
+                    BonjourTCPClient.sharedInstance.send(userJSON)
                 } else {
                     self.appendClientReceive("Can't sent JSON string: ")
                 }
             })
         }
-        ZHBonjour.sharedInstance.dataReceivedCallback = {(data: String) in
+        
+        BonjourTCPClient.sharedInstance.dataReceivedCallback = {(data: String) in
             self.appendClientReceive("received: " + data)
         }
-
         
-        ZHBonjour.sharedInstance.startClient()
-        
-
     }
     @IBAction func clientSendButtonTouchUpInside(sender: UIButton!) {
         self.appendClientReceive("sending: " + self.clientSendMessageTextField.text!)
-        ZHBonjour.sharedInstance.send(self.clientSendMessageTextField.text!)
+        BonjourTCPClient.sharedInstance.send(self.clientSendMessageTextField.text!)
     }
 
 }

@@ -8,13 +8,8 @@
 
 import Foundation
 
-
-
 class BonjourTCPClient : NSObject {
 	
-//	let kServiceType = "_myservice._tcp."
-//    let kServiceType = "_vaporwarewolf_service._tcp."
-    let kServiceType = ZHBonjourServiceName
 	
 	///////////////////////////////////////////////////////////////////////////////////////////////////
 	//  MARK: init
@@ -22,6 +17,8 @@ class BonjourTCPClient : NSObject {
 	
 	static let sharedInstance = BonjourTCPClient()
 	
+    var dataReceivedCallback : ((String) -> ())? = nil
+    
 	private override init() {
 		super.init()
 
@@ -43,7 +40,7 @@ class BonjourTCPClient : NSObject {
 		self.serviceBrowser = NSNetServiceBrowser()
 		self.serviceBrowser?.includesPeerToPeer = true
 		self.serviceBrowser?.delegate = self
-		self.serviceBrowser?.searchForServicesOfType(kServiceType, inDomain: "local")
+		self.serviceBrowser?.searchForServicesOfType(ZHBonjourTCPServiceName, inDomain: "local")
 	}
 	
 
@@ -132,16 +129,6 @@ class BonjourTCPClient : NSObject {
 		self.streamsConnected = false
 		self.openedStreams = 0
 	}
-	
-	
-
-
-
-	
-
-    
-	
-	
 }
 
 extension BonjourTCPClient: NSNetServiceBrowserDelegate {
@@ -169,23 +156,54 @@ extension BonjourTCPClient: NSNetServiceBrowserDelegate {
     
     func netServiceBrowser(browser: NSNetServiceBrowser, didRemoveService service: NSNetService, moreComing: Bool) {
         NSLog("service removed:" + service.name)
-        self.services = self.services.filter() { $0 != service }
-        
-        if !moreComing {
-            if let callback = self.servicesCallback {
-                callback(self.services)
-            }
-        }
+//        self.services = self.services.filter() { $0 != service }
+//        
+//        if !moreComing {
+//            if let callback = self.servicesCallback {
+//                callback(self.services)
+//            }
+//        }
     }
 }
 
 extension BonjourTCPClient: NSStreamDelegate {
     func stream(aStream: NSStream, handleEvent eventCode: NSStreamEvent) {
         switch eventCode {
+        case NSStreamEvent.None:
+            print("None")
+            break
+
         case NSStreamEvent.OpenCompleted:
             self.openedStreams++
             
             break
+        case NSStreamEvent.HasBytesAvailable:
+            print("HasBytesAvailable")
+            guard let inputStream = self.inputStream else {
+                return NSLog("no input stream")
+            }
+            
+            let bufferSize     = 4096
+            var buffer         = Array<UInt8>(count: bufferSize, repeatedValue: 0)
+            var message        = ""
+            
+            while inputStream.hasBytesAvailable {
+                let len = inputStream.read(&buffer, maxLength: bufferSize)
+                if len < 0 {
+                    NSLog("error reading stream...")
+                    return self.closeStreams()
+                }
+                if len > 0 {
+                    message += NSString(bytes: &buffer, length: len, encoding: NSUTF8StringEncoding) as! String
+                }
+                if len == 0 {
+                    NSLog("no more bytes available...")
+                    break
+                }
+            }
+            self.dataReceivedCallback?(message)
+            break
+
         case NSStreamEvent.HasSpaceAvailable:
             if self.openedStreams == 2 && !self.streamsConnected {
                 NSLog("streams connected.")
@@ -193,67 +211,22 @@ extension BonjourTCPClient: NSStreamDelegate {
                 self.streamsConnectedCallback?()
             }
             break
+            
+        case NSStreamEvent.ErrorOccurred:
+            print("ErrorOccurred")
+            break
+            
+        case NSStreamEvent.EndEncountered:
+            print("EndEncountered")
+            break
+
         default:
             break
         }
+        
+        
     }
 }
-
-
-//extension BonjourTCPClient: NSNetServiceDelegate {
-//    ///////////////////////////////////////////////////////////////////////////////////////////////////
-//    //  MARK: NSStreamDelegate
-//    ///////////////////////////////////////////////////////////////////////////////////////////////////
-//    
-//    func stream(aStream: NSStream, handleEvent eventCode: NSStreamEvent) {
-//        
-////        switch eventCode {
-////        case NSStreamEvent.None:
-////            
-////            break
-////        case NSStreamEvent.OpenCompleted:
-////            self.openedStreams++
-////            
-////            if self.openedStreams == 2 {
-////                self.service?.stop()
-////                self.serviceRunning = false
-////                self.registeredName = nil
-////            }
-////            break
-////        case NSStreamEvent.HasBytesAvailable:
-////            guard let inputStream = self.inputStream else {
-////                return NSLog("no input stream")
-////            }
-////            
-////            let bufferSize     = 4096
-////            var buffer         = Array<UInt8>(count: bufferSize, repeatedValue: 0)
-////            var message        = ""
-////            
-////            while inputStream.hasBytesAvailable {
-////                let len = inputStream.read(&buffer, maxLength: bufferSize)
-////                if len < 0 {
-////                    NSLog("error reading stream...")
-////                    return self.closeStreams()
-////                }
-////                if len > 0 {
-////                    message += NSString(bytes: &buffer, length: len, encoding: NSUTF8StringEncoding) as! String
-////                }
-////                if len == 0 {
-////                    NSLog("no more bytes available...")
-////                    break
-////                }
-////            }
-////            self.dataReceivedCallback?(message)
-////            break
-////            
-////        default:
-////            break
-////        }
-//    }
-//}
-
-
-
 
 
 

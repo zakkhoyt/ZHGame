@@ -8,8 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		C681653F1C1D363A00E026EE /* ZHUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = C681653E1C1D363A00E026EE /* ZHUser.swift */; };
-		C68165431C1DFFA600E026EE /* ZHBonjourConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = C68165421C1DFFA600E026EE /* ZHBonjourConfig.swift */; };
-		C68165441C1E004600E026EE /* ZHBonjourConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = C68165421C1DFFA600E026EE /* ZHBonjourConfig.swift */; };
 		C68165461C1E024A00E026EE /* ZHUserCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C68165451C1E024A00E026EE /* ZHUserCollectionViewCell.swift */; };
 		C68165471C1E05C500E026EE /* ZHUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = C681653E1C1D363A00E026EE /* ZHUser.swift */; };
 		C681654B1C1F47D400E026EE /* links.txt in Resources */ = {isa = PBXBuildFile; fileRef = C681654A1C1F47D400E026EE /* links.txt */; };
@@ -26,23 +24,22 @@
 		C696A8C11C1CFC88000333DA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C696A8C01C1CFC88000333DA /* Assets.xcassets */; };
 		C696A8CC1C1CFC88000333DA /* ZHGameTVOSTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C696A8CB1C1CFC88000333DA /* ZHGameTVOSTests.swift */; };
 		C696A8D71C1CFC88000333DA /* ZHGameTVOSUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C696A8D61C1CFC88000333DA /* ZHGameTVOSUITests.swift */; };
-		C696A9CF1C1CFD53000333DA /* ZHBonjourTCPClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = C696A9CD1C1CFD53000333DA /* ZHBonjourTCPClient.swift */; };
-		C696A9D01C1CFD53000333DA /* ZHBonjourTCPClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = C696A9CD1C1CFD53000333DA /* ZHBonjourTCPClient.swift */; };
-		C696A9D11C1CFD53000333DA /* ZHBonjourTCPServer.swift in Sources */ = {isa = PBXBuildFile; fileRef = C696A9CE1C1CFD53000333DA /* ZHBonjourTCPServer.swift */; };
-		C696A9D21C1CFD53000333DA /* ZHBonjourTCPServer.swift in Sources */ = {isa = PBXBuildFile; fileRef = C696A9CE1C1CFD53000333DA /* ZHBonjourTCPServer.swift */; };
 		C6F91A0B1C3F3B8900483FAD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6F91A0A1C3F3B8900483FAD /* AppDelegate.swift */; };
 		C6F91A0D1C3F3B8900483FAD /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6F91A0C1C3F3B8900483FAD /* ViewController.swift */; };
 		C6F91A0F1C3F3B8900483FAD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C6F91A0E1C3F3B8900483FAD /* Assets.xcassets */; };
 		C6F91A121C3F3B8900483FAD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C6F91A101C3F3B8900483FAD /* Main.storyboard */; };
 		C6F91A1D1C3F3B8A00483FAD /* ZHGameOSXTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6F91A1C1C3F3B8A00483FAD /* ZHGameOSXTests.swift */; };
 		C6F91A281C3F3B8A00483FAD /* ZHGameOSXUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6F91A271C3F3B8A00483FAD /* ZHGameOSXUITests.swift */; };
-		C6F91A331C3F423F00483FAD /* ZHBonjourConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = C68165421C1DFFA600E026EE /* ZHBonjourConfig.swift */; };
-		C6F91A341C3F423F00483FAD /* ZHBonjourTCPClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = C696A9CD1C1CFD53000333DA /* ZHBonjourTCPClient.swift */; };
-		C6F91A351C3F423F00483FAD /* ZHBonjourTCPServer.swift in Sources */ = {isa = PBXBuildFile; fileRef = C696A9CE1C1CFD53000333DA /* ZHBonjourTCPServer.swift */; };
 		C6F91A361C3F423F00483FAD /* ZHUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = C681653E1C1D363A00E026EE /* ZHUser.swift */; };
-		C6F91A381C3F4C0800483FAD /* ZHBonjour.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6F91A371C3F4C0800483FAD /* ZHBonjour.swift */; };
-		C6F91A391C3F4C6300483FAD /* ZHBonjour.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6F91A371C3F4C0800483FAD /* ZHBonjour.swift */; };
-		C6F91A3A1C3F4C6400483FAD /* ZHBonjour.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6F91A371C3F4C0800483FAD /* ZHBonjour.swift */; };
+		C6F91A3D1C3F662000483FAD /* ZHBonjourTCPServer.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6F91A3B1C3F662000483FAD /* ZHBonjourTCPServer.swift */; };
+		C6F91A3E1C3F662000483FAD /* ZHBonjourTCPClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6F91A3C1C3F662000483FAD /* ZHBonjourTCPClient.swift */; };
+		C6F91A3F1C3F67C500483FAD /* ZHBonjourTCPServer.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6F91A3B1C3F662000483FAD /* ZHBonjourTCPServer.swift */; };
+		C6F91A401C3F67C500483FAD /* ZHBonjourTCPClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6F91A3C1C3F662000483FAD /* ZHBonjourTCPClient.swift */; };
+		C6F91A411C3F67C600483FAD /* ZHBonjourTCPServer.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6F91A3B1C3F662000483FAD /* ZHBonjourTCPServer.swift */; };
+		C6F91A421C3F67C600483FAD /* ZHBonjourTCPClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6F91A3C1C3F662000483FAD /* ZHBonjourTCPClient.swift */; };
+		C6F91A441C3F696200483FAD /* ZHBonjourTCP.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6F91A431C3F696200483FAD /* ZHBonjourTCP.swift */; };
+		C6F91A451C3F698100483FAD /* ZHBonjourTCP.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6F91A431C3F696200483FAD /* ZHBonjourTCP.swift */; };
+		C6F91A461C3F698200483FAD /* ZHBonjourTCP.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6F91A431C3F696200483FAD /* ZHBonjourTCP.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -92,7 +89,6 @@
 
 /* Begin PBXFileReference section */
 		C681653E1C1D363A00E026EE /* ZHUser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZHUser.swift; sourceTree = "<group>"; };
-		C68165421C1DFFA600E026EE /* ZHBonjourConfig.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZHBonjourConfig.swift; sourceTree = "<group>"; };
 		C68165451C1E024A00E026EE /* ZHUserCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZHUserCollectionViewCell.swift; sourceTree = "<group>"; };
 		C681654A1C1F47D400E026EE /* links.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = links.txt; sourceTree = "<group>"; };
 		C696A8821C1CFC75000333DA /* ZHGameIOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ZHGameIOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -120,8 +116,6 @@
 		C696A8D21C1CFC88000333DA /* ZHGameTVOSUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ZHGameTVOSUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C696A8D61C1CFC88000333DA /* ZHGameTVOSUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZHGameTVOSUITests.swift; sourceTree = "<group>"; };
 		C696A8D81C1CFC88000333DA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		C696A9CD1C1CFD53000333DA /* ZHBonjourTCPClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ZHBonjourTCPClient.swift; path = BonjourTCP/Shared/ZHBonjourTCPClient.swift; sourceTree = "<group>"; };
-		C696A9CE1C1CFD53000333DA /* ZHBonjourTCPServer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ZHBonjourTCPServer.swift; path = BonjourTCP/Shared/ZHBonjourTCPServer.swift; sourceTree = "<group>"; };
 		C6F91A081C3F3B8900483FAD /* ZHGameOSX.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ZHGameOSX.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C6F91A0A1C3F3B8900483FAD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C6F91A0C1C3F3B8900483FAD /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -134,7 +128,9 @@
 		C6F91A231C3F3B8A00483FAD /* ZHGameOSXUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ZHGameOSXUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C6F91A271C3F3B8A00483FAD /* ZHGameOSXUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZHGameOSXUITests.swift; sourceTree = "<group>"; };
 		C6F91A291C3F3B8A00483FAD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		C6F91A371C3F4C0800483FAD /* ZHBonjour.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZHBonjour.swift; sourceTree = "<group>"; };
+		C6F91A3B1C3F662000483FAD /* ZHBonjourTCPServer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ZHBonjourTCPServer.swift; path = BonjourTCP/Shared/ZHBonjourTCPServer.swift; sourceTree = "<group>"; };
+		C6F91A3C1C3F662000483FAD /* ZHBonjourTCPClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ZHBonjourTCPClient.swift; path = BonjourTCP/Shared/ZHBonjourTCPClient.swift; sourceTree = "<group>"; };
+		C6F91A431C3F696200483FAD /* ZHBonjourTCP.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZHBonjourTCP.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -207,10 +203,9 @@
 		C68165401C1DFF7B00E026EE /* Networking */ = {
 			isa = PBXGroup;
 			children = (
-				C68165421C1DFFA600E026EE /* ZHBonjourConfig.swift */,
-				C696A9CD1C1CFD53000333DA /* ZHBonjourTCPClient.swift */,
-				C696A9CE1C1CFD53000333DA /* ZHBonjourTCPServer.swift */,
-				C6F91A371C3F4C0800483FAD /* ZHBonjour.swift */,
+				C6F91A431C3F696200483FAD /* ZHBonjourTCP.swift */,
+				C6F91A3B1C3F662000483FAD /* ZHBonjourTCPServer.swift */,
+				C6F91A3C1C3F662000483FAD /* ZHBonjourTCPClient.swift */,
 				C681654A1C1F47D400E026EE /* links.txt */,
 			);
 			name = Networking;
@@ -670,13 +665,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C6F91A3E1C3F662000483FAD /* ZHBonjourTCPClient.swift in Sources */,
 				C696A8881C1CFC75000333DA /* ViewController.swift in Sources */,
-				C696A9CF1C1CFD53000333DA /* ZHBonjourTCPClient.swift in Sources */,
 				C681653F1C1D363A00E026EE /* ZHUser.swift in Sources */,
-				C696A9D11C1CFD53000333DA /* ZHBonjourTCPServer.swift in Sources */,
-				C6F91A381C3F4C0800483FAD /* ZHBonjour.swift in Sources */,
+				C6F91A441C3F696200483FAD /* ZHBonjourTCP.swift in Sources */,
 				C696A8861C1CFC75000333DA /* AppDelegate.swift in Sources */,
-				C68165431C1DFFA600E026EE /* ZHBonjourConfig.swift in Sources */,
+				C6F91A3D1C3F662000483FAD /* ZHBonjourTCPServer.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -702,12 +696,11 @@
 			files = (
 				C696A8BC1C1CFC88000333DA /* ViewController.swift in Sources */,
 				C68165461C1E024A00E026EE /* ZHUserCollectionViewCell.swift in Sources */,
-				C696A9D01C1CFD53000333DA /* ZHBonjourTCPClient.swift in Sources */,
-				C6F91A391C3F4C6300483FAD /* ZHBonjour.swift in Sources */,
-				C696A9D21C1CFD53000333DA /* ZHBonjourTCPServer.swift in Sources */,
+				C6F91A401C3F67C500483FAD /* ZHBonjourTCPClient.swift in Sources */,
 				C696A8BA1C1CFC88000333DA /* AppDelegate.swift in Sources */,
-				C68165441C1E004600E026EE /* ZHBonjourConfig.swift in Sources */,
+				C6F91A3F1C3F67C500483FAD /* ZHBonjourTCPServer.swift in Sources */,
 				C68165471C1E05C500E026EE /* ZHUser.swift in Sources */,
+				C6F91A451C3F698100483FAD /* ZHBonjourTCP.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -731,13 +724,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C6F91A421C3F67C600483FAD /* ZHBonjourTCPClient.swift in Sources */,
 				C6F91A0D1C3F3B8900483FAD /* ViewController.swift in Sources */,
 				C6F91A0B1C3F3B8900483FAD /* AppDelegate.swift in Sources */,
+				C6F91A461C3F698200483FAD /* ZHBonjourTCP.swift in Sources */,
 				C6F91A361C3F423F00483FAD /* ZHUser.swift in Sources */,
-				C6F91A341C3F423F00483FAD /* ZHBonjourTCPClient.swift in Sources */,
-				C6F91A3A1C3F4C6400483FAD /* ZHBonjour.swift in Sources */,
-				C6F91A331C3F423F00483FAD /* ZHBonjourConfig.swift in Sources */,
-				C6F91A351C3F423F00483FAD /* ZHBonjourTCPServer.swift in Sources */,
+				C6F91A411C3F67C600483FAD /* ZHBonjourTCPServer.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -20,9 +20,6 @@ import Foundation
 
 class BonjourTCPServer : NSObject {
 
-//	let kWiTapBonjourType = "_myservice._tcp."
-//    let kWiTapBonjourType = "_vaporwarewolf_service._tcp."
-    let kWiTapBonjourType = ZHBonjourServiceName
 
     var dataReceivedCallback : ((String) -> ())? = nil
     
@@ -35,7 +32,7 @@ class BonjourTCPServer : NSObject {
 	private override init() {
 		super.init()
 		
-		self.service = NSNetService(domain: "local.", type: kWiTapBonjourType, name: deviceName, port: 0)
+		self.service = NSNetService(domain: "local.", type: ZHBonjourTCPServiceName, name: deviceName, port: 0)
 		self.service?.includesPeerToPeer = true
 		self.service?.delegate = self
 		self.service?.publishWithOptions(.ListenForConnections)
@@ -56,45 +53,6 @@ class BonjourTCPServer : NSObject {
 	var serviceRunning = false
 	var registeredName : String? = nil
 
-	///////////////////////////////////////////////////////////////////////////////////////////////////
-	//  MARK: NSNetServiceDelegate
-	///////////////////////////////////////////////////////////////////////////////////////////////////
-
-	
-	func netServiceWillPublish(sender: NSNetService) {}
-	func netServiceDidPublish(sender: NSNetService) {
-		self.registeredName = sender.name
-	}
-	
-	func netService(sender: NSNetService, didNotPublish errorDict: [String : NSNumber]) {}
-	func netServiceWillResolve(sender: NSNetService) {}
-	func netServiceDidResolveAddress(sender: NSNetService) {}
-	func netService(sender: NSNetService, didNotResolve errorDict: [String : NSNumber]) {}
-	func netServiceDidStop(sender: NSNetService) {}
-	func netService(sender: NSNetService, didUpdateTXTRecordData data: NSData) {}
-	
-
-	func netService(sender: NSNetService, didAcceptConnectionWithInputStream inputStream: NSInputStream, outputStream: NSOutputStream) {
-		NSOperationQueue.mainQueue().addOperationWithBlock { [weak self] in
-			if self?.inputStream != nil {
-				inputStream.open()
-				inputStream.close()
-				outputStream.open()
-				outputStream.close()
-				return NSLog("connection already open.")
-			}
-			self?.service?.stop()
-			self?.serviceRunning = false
-			self?.registeredName = nil
-			
-			self?.inputStream = inputStream
-			self?.outputStream = outputStream
-			
-			self?.openStreams()
-			
-			NSLog("connection accepted: streams opened.")
-		}
-	}
 
 	///////////////////////////////////////////////////////////////////////////////////////////////////
 	//  MARK: streams
@@ -132,11 +90,77 @@ class BonjourTCPServer : NSObject {
 		
 		self.openedStreams = 0
 	}
-
+    
+    ///////////////////////////////////////////////////////////////////////////////////////////////////
+    //  MARK: send message
+    ///////////////////////////////////////////////////////////////////////////////////////////////////
+    
+    func send(message: String) {
+        guard self.openedStreams == 2 else {
+            return NSLog("no open streams \(self.openedStreams)")
+        }
+        
+        guard self.outputStream!.hasSpaceAvailable else {
+            return NSLog("no space available")
+        }
+        
+        let data: NSData = message.dataUsingEncoding(NSUTF8StringEncoding)!
+        let bytesWritten = self.outputStream!.write(UnsafePointer<UInt8>(data.bytes), maxLength: data.length)
+        
+        guard bytesWritten == data.length else {
+            self.closeStreams()
+            return NSLog("something is wrong...")
+        }
+        NSLog("data written... \(message)")
+    }
 }
 
 
 extension BonjourTCPServer: NSNetServiceDelegate {
+    ///////////////////////////////////////////////////////////////////////////////////////////////////
+    //  MARK: NSNetServiceDelegate
+    ///////////////////////////////////////////////////////////////////////////////////////////////////
+    
+    
+    func netServiceWillPublish(sender: NSNetService) {}
+    func netServiceDidPublish(sender: NSNetService) {
+        self.registeredName = sender.name
+    }
+    
+    func netService(sender: NSNetService, didNotPublish errorDict: [String : NSNumber]) {}
+    func netServiceWillResolve(sender: NSNetService) {}
+    func netServiceDidResolveAddress(sender: NSNetService) {}
+    func netService(sender: NSNetService, didNotResolve errorDict: [String : NSNumber]) {}
+    func netServiceDidStop(sender: NSNetService) {}
+    func netService(sender: NSNetService, didUpdateTXTRecordData data: NSData) {}
+    
+    
+    func netService(sender: NSNetService, didAcceptConnectionWithInputStream inputStream: NSInputStream, outputStream: NSOutputStream) {
+        NSOperationQueue.mainQueue().addOperationWithBlock { [weak self] in
+            if self?.inputStream != nil {
+                inputStream.open()
+                inputStream.close()
+                outputStream.open()
+                outputStream.close()
+                return NSLog("connection already open.")
+            }
+            self?.service?.stop()
+            self?.serviceRunning = false
+            self?.registeredName = nil
+            
+            self?.inputStream = inputStream
+            self?.outputStream = outputStream
+            
+            self?.openStreams()
+            
+            NSLog("connection accepted: streams opened.")
+        }
+    }
+
+}
+
+extension BonjourTCPServer: NSStreamDelegate {
+    
     ///////////////////////////////////////////////////////////////////////////////////////////////////
     //  MARK: NSStreamDelegate
     ///////////////////////////////////////////////////////////////////////////////////////////////////
@@ -145,9 +169,10 @@ extension BonjourTCPServer: NSNetServiceDelegate {
         
         switch eventCode {
         case NSStreamEvent.None:
-            
+            print("None")
             break
         case NSStreamEvent.OpenCompleted:
+            print("OpenCompleted")
             self.openedStreams++
             
             if self.openedStreams == 2 {
@@ -157,6 +182,7 @@ extension BonjourTCPServer: NSNetServiceDelegate {
             }
             break
         case NSStreamEvent.HasBytesAvailable:
+            print("HasBytesAvailable")
             guard let inputStream = self.inputStream else {
                 return NSLog("no input stream")
             }
@@ -181,35 +207,28 @@ extension BonjourTCPServer: NSNetServiceDelegate {
             }
             self.dataReceivedCallback?(message)
             break
+        case NSStreamEvent.HasSpaceAvailable:
+            print("HasSpaceAvailable")
+//            if self.openedStreams == 2 && !self.streamsConnected {
+//                NSLog("streams connected.")
+//                self.streamsConnected = true
+//                self.streamsConnectedCallback?()
+//            }
+            break
+            
+        case NSStreamEvent.ErrorOccurred:
+            print("ErrorOccurred")
+            break
+            
+        case NSStreamEvent.EndEncountered:
+            print("EndEncountered")
+            break
+            
+
             
         default:
             break
         }
-    }
-}
-
-extension BonjourTCPServer: NSStreamDelegate {
-    ///////////////////////////////////////////////////////////////////////////////////////////////////
-    //  MARK: send message
-    ///////////////////////////////////////////////////////////////////////////////////////////////////
-    
-    func send(message: String) {
-        guard self.openedStreams == 2 else {
-            return NSLog("no open streams \(self.openedStreams)")
-        }
-        
-        guard self.outputStream!.hasSpaceAvailable else {
-            return NSLog("no space available")
-        }
-        
-        let data: NSData = message.dataUsingEncoding(NSUTF8StringEncoding)!
-        let bytesWritten = self.outputStream!.write(UnsafePointer<UInt8>(data.bytes), maxLength: data.length)
-        
-        guard bytesWritten == data.length else {
-            self.closeStreams()
-            return NSLog("something is wrong...")
-        }
-        NSLog("data written... \(message)")
     }
 }
 
