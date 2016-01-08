@@ -29,12 +29,52 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="gie-3b-IiU">
+                                <rect key="frame" x="20" y="66" width="1880" height="994"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="VVl-SK-QLv">
+                                    <size key="itemSize" width="281" height="281"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="ZHUserCollectionViewCell" id="5UE-oT-DFe" customClass="ZHUserCollectionViewCell" customModule="ZHGameTVOS" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="281" height="281"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                            <rect key="frame" x="0.0" y="0.0" width="281" height="281"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ns0-8d-fe7">
+                                                    <rect key="frame" x="8" y="8" width="265" height="265"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        </view>
+                                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                        <connections>
+                                            <outlet property="statusLabel" destination="ns0-8d-fe7" id="2ZR-Fi-uhd"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="yhK-3e-gHR"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="V8v-qI-Aht"/>
+                                </connections>
+                            </collectionView>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="gie-3b-IiU" firstAttribute="top" secondItem="ydo-c2-ryg" secondAttribute="bottom" constant="8" id="2pR-iD-bdD"/>
                             <constraint firstAttribute="trailingMargin" secondItem="ydo-c2-ryg" secondAttribute="trailing" constant="8" id="57w-3S-AJU"/>
+                            <constraint firstAttribute="trailing" secondItem="gie-3b-IiU" secondAttribute="trailing" constant="20" id="9UF-On-iqU"/>
                             <constraint firstItem="1oQ-6C-7ZS" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="8" id="9b4-hc-eki"/>
                             <constraint firstItem="ydo-c2-ryg" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="8" id="IUN-Rb-C0l"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="gie-3b-IiU" secondAttribute="bottom" constant="20" id="L1s-6X-UWI"/>
+                            <constraint firstItem="gie-3b-IiU" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="20" id="SpR-NV-ZM5"/>
                             <constraint firstItem="1oQ-6C-7ZS" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" id="jjz-ho-hTj"/>
                             <constraint firstItem="ydo-c2-ryg" firstAttribute="top" secondItem="1oQ-6C-7ZS" secondAttribute="bottom" constant="8" id="pdq-0S-hHd"/>
                             <constraint firstAttribute="trailingMargin" secondItem="1oQ-6C-7ZS" secondAttribute="trailing" constant="8" id="vKR-QY-v2m"/>
@@ -42,11 +82,13 @@
                     </view>
                     <connections>
                         <outlet property="clientsLabel" destination="ydo-c2-ryg" id="Y6u-GK-EGY"/>
+                        <outlet property="collectionView" destination="gie-3b-IiU" id="1lL-2P-H7o"/>
                         <outlet property="statusLabel" destination="1oQ-6C-7ZS" id="btm-00-amM"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="154" y="255"/>
         </scene>
     </scenes>
 </document>

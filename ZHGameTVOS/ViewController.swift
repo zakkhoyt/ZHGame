@@ -9,9 +9,11 @@
 import UIKit
 
 class ViewController: UIViewController {
+    @IBOutlet var clientsTextView: NSTextView!
     @IBOutlet weak var statusLabel: UILabel!
     @IBOutlet weak var clientsLabel: UILabel!
-    var clients = [String]()
+    @IBOutlet weak var collectionView: UICollectionView!
+    var users = [ZHUser]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -20,10 +22,12 @@ class ViewController: UIViewController {
         clientsLabel.text = ""
         
         BonjourTCPServer.sharedInstance.dataReceivedCallback = {(data: String) in
-            NSLog("\(data)")
-            self.clients.append(data)
+            NSLog("Received: \(data)")
+            let user = ZHUser(jsonString: data)
+            self.users.append(user)
+            self.collectionView.reloadData()
             
-            self.clientsLabel.text = data + "\n" + self.clientsLabel.text!
+//            BonjourTCPServer.sharedInstance.send("Closed loop");
         }
     }
     
@@ -34,4 +38,37 @@ class ViewController: UIViewController {
 
 
 }
+
+extension ViewController: UICollectionViewDataSource {
+    func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return users.count
+        @IBOutlet weak var clientView: UIView!
+    }
+    
+    func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
+        let cell = collectionView.dequeueReusableCellWithReuseIdentifier("ZHUserCollectionViewCell", forIndexPath: indexPath) as? ZHUserCollectionViewCell
+        cell!.user = users[indexPath.item]
+        return cell!
+    }
+}
+
+extension ViewController: UICollectionViewDelegateFlowLayout {
+    func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAtIndexPath indexPath: NSIndexPath) -> CGSize {
+        let w = collectionView.bounds.size.width / 4.0
+        return CGSize(width: w, height: w)
+    }
+    
+    func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAtIndex section: Int) -> CGFloat {
+        return 0
+    }
+    
+    func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAtIndex section: Int) -> CGFloat {
+        return 0
+    }
+}
+
+extension ViewController: UICollectionViewDelegate {
+    
+}
+
 

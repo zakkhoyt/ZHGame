@@ -7,12 +7,17 @@
 		<key>ZHGameIOS.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>1</integer>
+			<integer>0</integer>
+		</dict>
+		<key>ZHGameOSX.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>2</integer>
 		</dict>
 		<key>ZHGameTVOS.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>3</integer>
+			<integer>1</integer>
 		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
@@ -43,6 +48,21 @@
 			<true/>
 		</dict>
 		<key>C696A8D11C1CFC88000333DA</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>C6F91A071C3F3B8900483FAD</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>C6F91A171C3F3B8A00483FAD</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>C6F91A221C3F3B8A00483FAD</key>
 		<dict>
 			<key>primary</key>
 			<true/>

@@ -1,0 +1,16 @@
+// praveensharma
+No problem at all - i've also got around 6 years under my belt. Great to hear all opinions.
+To be frank I went with UDP and Cocoa Async because it just worked and was so much easier to implement.
+For constant streams like audio progress to power a progress bar it also seemed more appropriate.
+Honestly TCP is probably the better option here and I was noticing dire consequences on
+dropping a packet (basically a view wouldn't load properly on the next round) so it seems like
+I'd end up with a lot more work on the error handling side with UDP anyway.
+FYI here's the link that really got me started on the right foot since I'm also using swift:
+
+http://theswiftdev.com/2015/10/15/networking-not-just-for-tvos-bonjour-tcp-udp-corebluetooth/
+
+
+
+
+// CocoaAsyncSocket
+https://github.com/robbiehanson/CocoaAsyncSocket

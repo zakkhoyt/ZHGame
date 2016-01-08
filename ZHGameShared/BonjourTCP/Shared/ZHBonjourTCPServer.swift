@@ -18,12 +18,14 @@ import Foundation
 #endif
 
 
-class BonjourTCPServer : NSObject, NSNetServiceDelegate, NSStreamDelegate
-{
+class BonjourTCPServer : NSObject {
 
 //	let kWiTapBonjourType = "_myservice._tcp."
-    let kWiTapBonjourType = "_vaporwarewolf_service._tcp."
+//    let kWiTapBonjourType = "_vaporwarewolf_service._tcp."
+    let kWiTapBonjourType = ZHBonjourServiceName
 
+    var dataReceivedCallback : ((String) -> ())? = nil
+    
 	///////////////////////////////////////////////////////////////////////////////////////////////////
 	//  MARK: init
 	///////////////////////////////////////////////////////////////////////////////////////////////////
@@ -41,6 +43,10 @@ class BonjourTCPServer : NSObject, NSNetServiceDelegate, NSStreamDelegate
 		self.serviceRunning = true
 		
 	}
+    
+    deinit {
+        print("deinit")
+    }
 
 	///////////////////////////////////////////////////////////////////////////////////////////////////
 	//  MARK: service
@@ -126,62 +132,86 @@ class BonjourTCPServer : NSObject, NSNetServiceDelegate, NSStreamDelegate
 		
 		self.openedStreams = 0
 	}
-	
-	
-
-	///////////////////////////////////////////////////////////////////////////////////////////////////
-	//  MARK: NSStreamDelegate
-	///////////////////////////////////////////////////////////////////////////////////////////////////
-	var dataReceivedCallback : ((String) -> ())? = nil
-	func stream(aStream: NSStream, handleEvent eventCode: NSStreamEvent) {
-
-		switch eventCode {
-		case NSStreamEvent.None:
-
-		break
-		case NSStreamEvent.OpenCompleted:
-			self.openedStreams++
-			
-			if self.openedStreams == 2 {
-				self.service?.stop()
-				self.serviceRunning = false
-				self.registeredName = nil
-			}
-		break
-		case NSStreamEvent.HasBytesAvailable:
-			guard let inputStream = self.inputStream else {
-				return NSLog("no input stream")
-			}
-			
-			let bufferSize     = 4096
-			var buffer         = Array<UInt8>(count: bufferSize, repeatedValue: 0)
-			var message        = ""
-
-			while inputStream.hasBytesAvailable {
-				let len = inputStream.read(&buffer, maxLength: bufferSize)
-				if len < 0 {
-					NSLog("error reading stream...")
-					return self.closeStreams()
-				}
-				if len > 0 {
-					message += NSString(bytes: &buffer, length: len, encoding: NSUTF8StringEncoding) as! String
-				}
-				if len == 0 {
-					NSLog("no more bytes available...")
-					break
-				}
-			}
-			self.dataReceivedCallback?(message)
-		break
-
-		default:
-		break
-		}
-	}
 
 }
 
 
+extension BonjourTCPServer: NSNetServiceDelegate {
+    ///////////////////////////////////////////////////////////////////////////////////////////////////
+    //  MARK: NSStreamDelegate
+    ///////////////////////////////////////////////////////////////////////////////////////////////////
+    
+    func stream(aStream: NSStream, handleEvent eventCode: NSStreamEvent) {
+        
+        switch eventCode {
+        case NSStreamEvent.None:
+            
+            break
+        case NSStreamEvent.OpenCompleted:
+            self.openedStreams++
+            
+            if self.openedStreams == 2 {
+                self.service?.stop()
+                self.serviceRunning = false
+                self.registeredName = nil
+            }
+            break
+        case NSStreamEvent.HasBytesAvailable:
+            guard let inputStream = self.inputStream else {
+                return NSLog("no input stream")
+            }
+            
+            let bufferSize     = 4096
+            var buffer         = Array<UInt8>(count: bufferSize, repeatedValue: 0)
+            var message        = ""
+            
+            while inputStream.hasBytesAvailable {
+                let len = inputStream.read(&buffer, maxLength: bufferSize)
+                if len < 0 {
+                    NSLog("error reading stream...")
+                    return self.closeStreams()
+                }
+                if len > 0 {
+                    message += NSString(bytes: &buffer, length: len, encoding: NSUTF8StringEncoding) as! String
+                }
+                if len == 0 {
+                    NSLog("no more bytes available...")
+                    break
+                }
+            }
+            self.dataReceivedCallback?(message)
+            break
+            
+        default:
+            break
+        }
+    }
+}
+
+extension BonjourTCPServer: NSStreamDelegate {
+    ///////////////////////////////////////////////////////////////////////////////////////////////////
+    //  MARK: send message
+    ///////////////////////////////////////////////////////////////////////////////////////////////////
+    
+    func send(message: String) {
+        guard self.openedStreams == 2 else {
+            return NSLog("no open streams \(self.openedStreams)")
+        }
+        
+        guard self.outputStream!.hasSpaceAvailable else {
+            return NSLog("no space available")
+        }
+        
+        let data: NSData = message.dataUsingEncoding(NSUTF8StringEncoding)!
+        let bytesWritten = self.outputStream!.write(UnsafePointer<UInt8>(data.bytes), maxLength: data.length)
+        
+        guard bytesWritten == data.length else {
+            self.closeStreams()
+            return NSLog("something is wrong...")
+        }
+        NSLog("data written... \(message)")
+    }
+}
 
 
 

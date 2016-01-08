@@ -8,6 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		C681653F1C1D363A00E026EE /* ZHUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = C681653E1C1D363A00E026EE /* ZHUser.swift */; };
+		C68165431C1DFFA600E026EE /* ZHBonjourConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = C68165421C1DFFA600E026EE /* ZHBonjourConfig.swift */; };
+		C68165441C1E004600E026EE /* ZHBonjourConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = C68165421C1DFFA600E026EE /* ZHBonjourConfig.swift */; };
+		C68165461C1E024A00E026EE /* ZHUserCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C68165451C1E024A00E026EE /* ZHUserCollectionViewCell.swift */; };
+		C68165471C1E05C500E026EE /* ZHUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = C681653E1C1D363A00E026EE /* ZHUser.swift */; };
+		C681654B1C1F47D400E026EE /* links.txt in Resources */ = {isa = PBXBuildFile; fileRef = C681654A1C1F47D400E026EE /* links.txt */; };
 		C696A8861C1CFC75000333DA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C696A8851C1CFC75000333DA /* AppDelegate.swift */; };
 		C696A8881C1CFC75000333DA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C696A8871C1CFC75000333DA /* ViewController.swift */; };
 		C696A88B1C1CFC75000333DA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C696A8891C1CFC75000333DA /* Main.storyboard */; };
@@ -21,10 +26,23 @@
 		C696A8C11C1CFC88000333DA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C696A8C01C1CFC88000333DA /* Assets.xcassets */; };
 		C696A8CC1C1CFC88000333DA /* ZHGameTVOSTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C696A8CB1C1CFC88000333DA /* ZHGameTVOSTests.swift */; };
 		C696A8D71C1CFC88000333DA /* ZHGameTVOSUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C696A8D61C1CFC88000333DA /* ZHGameTVOSUITests.swift */; };
-		C696A9CF1C1CFD53000333DA /* BonjourTCPClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = C696A9CD1C1CFD53000333DA /* BonjourTCPClient.swift */; };
-		C696A9D01C1CFD53000333DA /* BonjourTCPClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = C696A9CD1C1CFD53000333DA /* BonjourTCPClient.swift */; };
-		C696A9D11C1CFD53000333DA /* BonjourTCPServer.swift in Sources */ = {isa = PBXBuildFile; fileRef = C696A9CE1C1CFD53000333DA /* BonjourTCPServer.swift */; };
-		C696A9D21C1CFD53000333DA /* BonjourTCPServer.swift in Sources */ = {isa = PBXBuildFile; fileRef = C696A9CE1C1CFD53000333DA /* BonjourTCPServer.swift */; };
+		C696A9CF1C1CFD53000333DA /* ZHBonjourTCPClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = C696A9CD1C1CFD53000333DA /* ZHBonjourTCPClient.swift */; };
+		C696A9D01C1CFD53000333DA /* ZHBonjourTCPClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = C696A9CD1C1CFD53000333DA /* ZHBonjourTCPClient.swift */; };
+		C696A9D11C1CFD53000333DA /* ZHBonjourTCPServer.swift in Sources */ = {isa = PBXBuildFile; fileRef = C696A9CE1C1CFD53000333DA /* ZHBonjourTCPServer.swift */; };
+		C696A9D21C1CFD53000333DA /* ZHBonjourTCPServer.swift in Sources */ = {isa = PBXBuildFile; fileRef = C696A9CE1C1CFD53000333DA /* ZHBonjourTCPServer.swift */; };
+		C6F91A0B1C3F3B8900483FAD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6F91A0A1C3F3B8900483FAD /* AppDelegate.swift */; };
+		C6F91A0D1C3F3B8900483FAD /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6F91A0C1C3F3B8900483FAD /* ViewController.swift */; };
+		C6F91A0F1C3F3B8900483FAD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C6F91A0E1C3F3B8900483FAD /* Assets.xcassets */; };
+		C6F91A121C3F3B8900483FAD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C6F91A101C3F3B8900483FAD /* Main.storyboard */; };
+		C6F91A1D1C3F3B8A00483FAD /* ZHGameOSXTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6F91A1C1C3F3B8A00483FAD /* ZHGameOSXTests.swift */; };
+		C6F91A281C3F3B8A00483FAD /* ZHGameOSXUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6F91A271C3F3B8A00483FAD /* ZHGameOSXUITests.swift */; };
+		C6F91A331C3F423F00483FAD /* ZHBonjourConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = C68165421C1DFFA600E026EE /* ZHBonjourConfig.swift */; };
+		C6F91A341C3F423F00483FAD /* ZHBonjourTCPClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = C696A9CD1C1CFD53000333DA /* ZHBonjourTCPClient.swift */; };
+		C6F91A351C3F423F00483FAD /* ZHBonjourTCPServer.swift in Sources */ = {isa = PBXBuildFile; fileRef = C696A9CE1C1CFD53000333DA /* ZHBonjourTCPServer.swift */; };
+		C6F91A361C3F423F00483FAD /* ZHUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = C681653E1C1D363A00E026EE /* ZHUser.swift */; };
+		C6F91A381C3F4C0800483FAD /* ZHBonjour.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6F91A371C3F4C0800483FAD /* ZHBonjour.swift */; };
+		C6F91A391C3F4C6300483FAD /* ZHBonjour.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6F91A371C3F4C0800483FAD /* ZHBonjour.swift */; };
+		C6F91A3A1C3F4C6400483FAD /* ZHBonjour.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6F91A371C3F4C0800483FAD /* ZHBonjour.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,10 +74,27 @@
 			remoteGlobalIDString = C696A8B61C1CFC88000333DA;
 			remoteInfo = ZHGameTVOS;
 		};
+		C6F91A191C3F3B8A00483FAD /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C696A87A1C1CFC75000333DA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C6F91A071C3F3B8900483FAD;
+			remoteInfo = ZHGameOSX;
+		};
+		C6F91A241C3F3B8A00483FAD /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C696A87A1C1CFC75000333DA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C6F91A071C3F3B8900483FAD;
+			remoteInfo = ZHGameOSX;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		C681653E1C1D363A00E026EE /* ZHUser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZHUser.swift; sourceTree = "<group>"; };
+		C68165421C1DFFA600E026EE /* ZHBonjourConfig.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZHBonjourConfig.swift; sourceTree = "<group>"; };
+		C68165451C1E024A00E026EE /* ZHUserCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZHUserCollectionViewCell.swift; sourceTree = "<group>"; };
+		C681654A1C1F47D400E026EE /* links.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = links.txt; sourceTree = "<group>"; };
 		C696A8821C1CFC75000333DA /* ZHGameIOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ZHGameIOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C696A8851C1CFC75000333DA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C696A8871C1CFC75000333DA /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -85,8 +120,21 @@
 		C696A8D21C1CFC88000333DA /* ZHGameTVOSUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ZHGameTVOSUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C696A8D61C1CFC88000333DA /* ZHGameTVOSUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZHGameTVOSUITests.swift; sourceTree = "<group>"; };
 		C696A8D81C1CFC88000333DA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		C696A9CD1C1CFD53000333DA /* BonjourTCPClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BonjourTCPClient.swift; path = BonjourTCP/Shared/BonjourTCPClient.swift; sourceTree = "<group>"; };
-		C696A9CE1C1CFD53000333DA /* BonjourTCPServer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BonjourTCPServer.swift; path = BonjourTCP/Shared/BonjourTCPServer.swift; sourceTree = "<group>"; };
+		C696A9CD1C1CFD53000333DA /* ZHBonjourTCPClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ZHBonjourTCPClient.swift; path = BonjourTCP/Shared/ZHBonjourTCPClient.swift; sourceTree = "<group>"; };
+		C696A9CE1C1CFD53000333DA /* ZHBonjourTCPServer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ZHBonjourTCPServer.swift; path = BonjourTCP/Shared/ZHBonjourTCPServer.swift; sourceTree = "<group>"; };
+		C6F91A081C3F3B8900483FAD /* ZHGameOSX.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ZHGameOSX.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		C6F91A0A1C3F3B8900483FAD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		C6F91A0C1C3F3B8900483FAD /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		C6F91A0E1C3F3B8900483FAD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		C6F91A111C3F3B8900483FAD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		C6F91A131C3F3B8900483FAD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C6F91A181C3F3B8A00483FAD /* ZHGameOSXTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ZHGameOSXTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		C6F91A1C1C3F3B8A00483FAD /* ZHGameOSXTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZHGameOSXTests.swift; sourceTree = "<group>"; };
+		C6F91A1E1C3F3B8A00483FAD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C6F91A231C3F3B8A00483FAD /* ZHGameOSXUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ZHGameOSXUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		C6F91A271C3F3B8A00483FAD /* ZHGameOSXUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZHGameOSXUITests.swift; sourceTree = "<group>"; };
+		C6F91A291C3F3B8A00483FAD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C6F91A371C3F4C0800483FAD /* ZHBonjour.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZHBonjour.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -132,19 +180,63 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		C6F91A051C3F3B8900483FAD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C6F91A151C3F3B8A00483FAD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C6F91A201C3F3B8A00483FAD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		C68165401C1DFF7B00E026EE /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				C68165421C1DFFA600E026EE /* ZHBonjourConfig.swift */,
+				C696A9CD1C1CFD53000333DA /* ZHBonjourTCPClient.swift */,
+				C696A9CE1C1CFD53000333DA /* ZHBonjourTCPServer.swift */,
+				C6F91A371C3F4C0800483FAD /* ZHBonjour.swift */,
+				C681654A1C1F47D400E026EE /* links.txt */,
+			);
+			name = Networking;
+			sourceTree = "<group>";
+		};
+		C68165411C1DFF8B00E026EE /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				C681653E1C1D363A00E026EE /* ZHUser.swift */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
 		C696A8791C1CFC75000333DA = {
 			isa = PBXGroup;
 			children = (
 				C696A8E21C1CFCD3000333DA /* ZHGameShared */,
 				C696A8841C1CFC75000333DA /* ZHGameIOS */,
+				C696A8B81C1CFC88000333DA /* ZHGameTVOS */,
+				C6F91A091C3F3B8900483FAD /* ZHGameOSX */,
 				C696A8991C1CFC75000333DA /* ZHGameIOSTests */,
 				C696A8A41C1CFC75000333DA /* ZHGameIOSUITests */,
-				C696A8B81C1CFC88000333DA /* ZHGameTVOS */,
 				C696A8CA1C1CFC88000333DA /* ZHGameTVOSTests */,
 				C696A8D51C1CFC88000333DA /* ZHGameTVOSUITests */,
+				C6F91A1B1C3F3B8A00483FAD /* ZHGameOSXTests */,
+				C6F91A261C3F3B8A00483FAD /* ZHGameOSXUITests */,
 				C696A8831C1CFC75000333DA /* Products */,
 			);
 			sourceTree = "<group>";
@@ -158,6 +250,9 @@
 				C696A8B71C1CFC88000333DA /* ZHGameTVOS.app */,
 				C696A8C71C1CFC88000333DA /* ZHGameTVOSTests.xctest */,
 				C696A8D21C1CFC88000333DA /* ZHGameTVOSUITests.xctest */,
+				C6F91A081C3F3B8900483FAD /* ZHGameOSX.app */,
+				C6F91A181C3F3B8A00483FAD /* ZHGameOSXTests.xctest */,
+				C6F91A231C3F3B8A00483FAD /* ZHGameOSXUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -201,6 +296,7 @@
 				C696A8BD1C1CFC88000333DA /* Main.storyboard */,
 				C696A8C01C1CFC88000333DA /* Assets.xcassets */,
 				C696A8C21C1CFC88000333DA /* Info.plist */,
+				C68165451C1E024A00E026EE /* ZHUserCollectionViewCell.swift */,
 			);
 			path = ZHGameTVOS;
 			sourceTree = "<group>";
@@ -226,11 +322,40 @@
 		C696A8E21C1CFCD3000333DA /* ZHGameShared */ = {
 			isa = PBXGroup;
 			children = (
-				C696A9CD1C1CFD53000333DA /* BonjourTCPClient.swift */,
-				C696A9CE1C1CFD53000333DA /* BonjourTCPServer.swift */,
-				C681653E1C1D363A00E026EE /* ZHUser.swift */,
+				C68165401C1DFF7B00E026EE /* Networking */,
+				C68165411C1DFF8B00E026EE /* Model */,
 			);
 			path = ZHGameShared;
+			sourceTree = "<group>";
+		};
+		C6F91A091C3F3B8900483FAD /* ZHGameOSX */ = {
+			isa = PBXGroup;
+			children = (
+				C6F91A0A1C3F3B8900483FAD /* AppDelegate.swift */,
+				C6F91A0C1C3F3B8900483FAD /* ViewController.swift */,
+				C6F91A0E1C3F3B8900483FAD /* Assets.xcassets */,
+				C6F91A101C3F3B8900483FAD /* Main.storyboard */,
+				C6F91A131C3F3B8900483FAD /* Info.plist */,
+			);
+			path = ZHGameOSX;
+			sourceTree = "<group>";
+		};
+		C6F91A1B1C3F3B8A00483FAD /* ZHGameOSXTests */ = {
+			isa = PBXGroup;
+			children = (
+				C6F91A1C1C3F3B8A00483FAD /* ZHGameOSXTests.swift */,
+				C6F91A1E1C3F3B8A00483FAD /* Info.plist */,
+			);
+			path = ZHGameOSXTests;
+			sourceTree = "<group>";
+		};
+		C6F91A261C3F3B8A00483FAD /* ZHGameOSXUITests */ = {
+			isa = PBXGroup;
+			children = (
+				C6F91A271C3F3B8A00483FAD /* ZHGameOSXUITests.swift */,
+				C6F91A291C3F3B8A00483FAD /* Info.plist */,
+			);
+			path = ZHGameOSXUITests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -342,6 +467,59 @@
 			productReference = C696A8D21C1CFC88000333DA /* ZHGameTVOSUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
+		C6F91A071C3F3B8900483FAD /* ZHGameOSX */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C6F91A301C3F3B8A00483FAD /* Build configuration list for PBXNativeTarget "ZHGameOSX" */;
+			buildPhases = (
+				C6F91A041C3F3B8900483FAD /* Sources */,
+				C6F91A051C3F3B8900483FAD /* Frameworks */,
+				C6F91A061C3F3B8900483FAD /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ZHGameOSX;
+			productName = ZHGameOSX;
+			productReference = C6F91A081C3F3B8900483FAD /* ZHGameOSX.app */;
+			productType = "com.apple.product-type.application";
+		};
+		C6F91A171C3F3B8A00483FAD /* ZHGameOSXTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C6F91A311C3F3B8A00483FAD /* Build configuration list for PBXNativeTarget "ZHGameOSXTests" */;
+			buildPhases = (
+				C6F91A141C3F3B8A00483FAD /* Sources */,
+				C6F91A151C3F3B8A00483FAD /* Frameworks */,
+				C6F91A161C3F3B8A00483FAD /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				C6F91A1A1C3F3B8A00483FAD /* PBXTargetDependency */,
+			);
+			name = ZHGameOSXTests;
+			productName = ZHGameOSXTests;
+			productReference = C6F91A181C3F3B8A00483FAD /* ZHGameOSXTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		C6F91A221C3F3B8A00483FAD /* ZHGameOSXUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C6F91A321C3F3B8A00483FAD /* Build configuration list for PBXNativeTarget "ZHGameOSXUITests" */;
+			buildPhases = (
+				C6F91A1F1C3F3B8A00483FAD /* Sources */,
+				C6F91A201C3F3B8A00483FAD /* Frameworks */,
+				C6F91A211C3F3B8A00483FAD /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				C6F91A251C3F3B8A00483FAD /* PBXTargetDependency */,
+			);
+			name = ZHGameOSXUITests;
+			productName = ZHGameOSXUITests;
+			productReference = C6F91A231C3F3B8A00483FAD /* ZHGameOSXUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -374,6 +552,17 @@
 						CreatedOnToolsVersion = 7.2;
 						TestTargetID = C696A8B61C1CFC88000333DA;
 					};
+					C6F91A071C3F3B8900483FAD = {
+						CreatedOnToolsVersion = 7.2;
+					};
+					C6F91A171C3F3B8A00483FAD = {
+						CreatedOnToolsVersion = 7.2;
+						TestTargetID = C6F91A071C3F3B8900483FAD;
+					};
+					C6F91A221C3F3B8A00483FAD = {
+						CreatedOnToolsVersion = 7.2;
+						TestTargetID = C6F91A071C3F3B8900483FAD;
+					};
 				};
 			};
 			buildConfigurationList = C696A87D1C1CFC75000333DA /* Build configuration list for PBXProject "ZHGameIOS" */;
@@ -395,6 +584,9 @@
 				C696A8B61C1CFC88000333DA /* ZHGameTVOS */,
 				C696A8C61C1CFC88000333DA /* ZHGameTVOSTests */,
 				C696A8D11C1CFC88000333DA /* ZHGameTVOSUITests */,
+				C6F91A071C3F3B8900483FAD /* ZHGameOSX */,
+				C6F91A171C3F3B8A00483FAD /* ZHGameOSXTests */,
+				C6F91A221C3F3B8A00483FAD /* ZHGameOSXUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -430,6 +622,7 @@
 			files = (
 				C696A8C11C1CFC88000333DA /* Assets.xcassets in Resources */,
 				C696A8BF1C1CFC88000333DA /* Main.storyboard in Resources */,
+				C681654B1C1F47D400E026EE /* links.txt in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -447,6 +640,29 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		C6F91A061C3F3B8900483FAD /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C6F91A0F1C3F3B8900483FAD /* Assets.xcassets in Resources */,
+				C6F91A121C3F3B8900483FAD /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C6F91A161C3F3B8A00483FAD /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C6F91A211C3F3B8A00483FAD /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -455,10 +671,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				C696A8881C1CFC75000333DA /* ViewController.swift in Sources */,
-				C696A9CF1C1CFD53000333DA /* BonjourTCPClient.swift in Sources */,
+				C696A9CF1C1CFD53000333DA /* ZHBonjourTCPClient.swift in Sources */,
 				C681653F1C1D363A00E026EE /* ZHUser.swift in Sources */,
-				C696A9D11C1CFD53000333DA /* BonjourTCPServer.swift in Sources */,
+				C696A9D11C1CFD53000333DA /* ZHBonjourTCPServer.swift in Sources */,
+				C6F91A381C3F4C0800483FAD /* ZHBonjour.swift in Sources */,
 				C696A8861C1CFC75000333DA /* AppDelegate.swift in Sources */,
+				C68165431C1DFFA600E026EE /* ZHBonjourConfig.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -483,9 +701,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				C696A8BC1C1CFC88000333DA /* ViewController.swift in Sources */,
-				C696A9D01C1CFD53000333DA /* BonjourTCPClient.swift in Sources */,
-				C696A9D21C1CFD53000333DA /* BonjourTCPServer.swift in Sources */,
+				C68165461C1E024A00E026EE /* ZHUserCollectionViewCell.swift in Sources */,
+				C696A9D01C1CFD53000333DA /* ZHBonjourTCPClient.swift in Sources */,
+				C6F91A391C3F4C6300483FAD /* ZHBonjour.swift in Sources */,
+				C696A9D21C1CFD53000333DA /* ZHBonjourTCPServer.swift in Sources */,
 				C696A8BA1C1CFC88000333DA /* AppDelegate.swift in Sources */,
+				C68165441C1E004600E026EE /* ZHBonjourConfig.swift in Sources */,
+				C68165471C1E05C500E026EE /* ZHUser.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -502,6 +724,36 @@
 			buildActionMask = 2147483647;
 			files = (
 				C696A8D71C1CFC88000333DA /* ZHGameTVOSUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C6F91A041C3F3B8900483FAD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C6F91A0D1C3F3B8900483FAD /* ViewController.swift in Sources */,
+				C6F91A0B1C3F3B8900483FAD /* AppDelegate.swift in Sources */,
+				C6F91A361C3F423F00483FAD /* ZHUser.swift in Sources */,
+				C6F91A341C3F423F00483FAD /* ZHBonjourTCPClient.swift in Sources */,
+				C6F91A3A1C3F4C6400483FAD /* ZHBonjour.swift in Sources */,
+				C6F91A331C3F423F00483FAD /* ZHBonjourConfig.swift in Sources */,
+				C6F91A351C3F423F00483FAD /* ZHBonjourTCPServer.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C6F91A141C3F3B8A00483FAD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C6F91A1D1C3F3B8A00483FAD /* ZHGameOSXTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C6F91A1F1C3F3B8A00483FAD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C6F91A281C3F3B8A00483FAD /* ZHGameOSXUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -528,6 +780,16 @@
 			target = C696A8B61C1CFC88000333DA /* ZHGameTVOS */;
 			targetProxy = C696A8D31C1CFC88000333DA /* PBXContainerItemProxy */;
 		};
+		C6F91A1A1C3F3B8A00483FAD /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C6F91A071C3F3B8900483FAD /* ZHGameOSX */;
+			targetProxy = C6F91A191C3F3B8A00483FAD /* PBXContainerItemProxy */;
+		};
+		C6F91A251C3F3B8A00483FAD /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C6F91A071C3F3B8900483FAD /* ZHGameOSX */;
+			targetProxy = C6F91A241C3F3B8A00483FAD /* PBXContainerItemProxy */;
+		};
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
@@ -551,6 +813,14 @@
 			isa = PBXVariantGroup;
 			children = (
 				C696A8BE1C1CFC88000333DA /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		C6F91A101C3F3B8900483FAD /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C6F91A111C3F3B8900483FAD /* Base */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
@@ -799,6 +1069,100 @@
 			};
 			name = Release;
 		};
+		C6F91A2A1C3F3B8A00483FAD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "-";
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = ZHGameOSX/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				PRODUCT_BUNDLE_IDENTIFIER = com.vaporwarewolf.ZHGameOSX;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		C6F91A2B1C3F3B8A00483FAD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "-";
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = ZHGameOSX/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				PRODUCT_BUNDLE_IDENTIFIER = com.vaporwarewolf.ZHGameOSX;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		C6F91A2C1C3F3B8A00483FAD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_IDENTITY = "-";
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = ZHGameOSXTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				PRODUCT_BUNDLE_IDENTIFIER = com.vaporwarewolf.ZHGameOSXTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ZHGameOSX.app/Contents/MacOS/ZHGameOSX";
+			};
+			name = Debug;
+		};
+		C6F91A2D1C3F3B8A00483FAD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_IDENTITY = "-";
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = ZHGameOSXTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				PRODUCT_BUNDLE_IDENTIFIER = com.vaporwarewolf.ZHGameOSXTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ZHGameOSX.app/Contents/MacOS/ZHGameOSX";
+			};
+			name = Release;
+		};
+		C6F91A2E1C3F3B8A00483FAD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "-";
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = ZHGameOSXUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				PRODUCT_BUNDLE_IDENTIFIER = com.vaporwarewolf.ZHGameOSXUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				TEST_TARGET_NAME = ZHGameOSX;
+				USES_XCTRUNNER = YES;
+			};
+			name = Debug;
+		};
+		C6F91A2F1C3F3B8A00483FAD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "-";
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = ZHGameOSXUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				PRODUCT_BUNDLE_IDENTIFIER = com.vaporwarewolf.ZHGameOSXUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				TEST_TARGET_NAME = ZHGameOSX;
+				USES_XCTRUNNER = YES;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -864,6 +1228,30 @@
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
+		};
+		C6F91A301C3F3B8A00483FAD /* Build configuration list for PBXNativeTarget "ZHGameOSX" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C6F91A2A1C3F3B8A00483FAD /* Debug */,
+				C6F91A2B1C3F3B8A00483FAD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		C6F91A311C3F3B8A00483FAD /* Build configuration list for PBXNativeTarget "ZHGameOSXTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C6F91A2C1C3F3B8A00483FAD /* Debug */,
+				C6F91A2D1C3F3B8A00483FAD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		C6F91A321C3F3B8A00483FAD /* Build configuration list for PBXNativeTarget "ZHGameOSXUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C6F91A2E1C3F3B8A00483FAD /* Debug */,
+				C6F91A2F1C3F3B8A00483FAD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
 		};
 /* End XCConfigurationList section */
 	};

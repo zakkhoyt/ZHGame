@@ -9,7 +9,7 @@
 import Foundation
 
 
-class ZHUser {
+class ZHUser: NSObject {
     var username: String? = nil
     var uuid: String? = nil
     
@@ -19,12 +19,40 @@ class ZHUser {
             
             let jsonData = try NSJSONSerialization.dataWithJSONObject(dictionary, options: .PrettyPrinted)
             let jsonString = NSString(data: jsonData, encoding: NSASCIIStringEncoding)
-            print("JSON string = \(jsonString)")
-
+            if let jsonString = jsonString {
+                print("JSON string = \(jsonString)")
+                return jsonString as String!
+            } else {
+                print("JSON string is nil")
+            }
         } catch _ {
             print("Error converting dictionary to json string")
             return nil
         }
         return nil
+    }
+    
+    init(jsonString: String) {
+        super.init()
+        
+
+        let jsonData = jsonString.dataUsingEncoding(NSUTF8StringEncoding)!
+        do {
+            let jsonDictionary = try NSJSONSerialization.JSONObjectWithData(jsonData, options: .MutableContainers) as? Dictionary<String, AnyObject>
+            if let jsonDictionary = jsonDictionary {
+                if let username = jsonDictionary["username"] {
+                    self.username = username as? String
+                }
+                
+                if let uuid = jsonDictionary["uuid"] {
+                    self.uuid = uuid as? String
+                }
+            }
+        } catch _ {
+            print("Error converting string to data to json dictionary")
+        }
+    }
+    override init(){
+        super.init()
     }
 }
