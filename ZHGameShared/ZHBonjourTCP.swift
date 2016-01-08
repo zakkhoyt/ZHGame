@@ -18,6 +18,7 @@ enum ZHBonjourTCPCommandType: NSString {
     case StartGame = "start_game"
     case RoundQuestion = "round_question"
     case RoundAnswer = "round_answer"
+    case RoundOver = "round_over"
     case GameOver = "game_over"
     
 

@@ -10,24 +10,19 @@ import Foundation
 
 class BonjourTCPClient : NSObject {
 	
-	
-	///////////////////////////////////////////////////////////////////////////////////////////////////
-	//  MARK: init
-	///////////////////////////////////////////////////////////////////////////////////////////////////
-	
 	static let sharedInstance = BonjourTCPClient()
 	
     var dataReceivedCallback : ((String) -> ())? = nil
     
 	private override init() {
 		super.init()
-
-		self.startBrowsingServices()
+		startBrowsingServices()
 	}
-	
-	///////////////////////////////////////////////////////////////////////////////////////////////////
-	//  MARK: service browser
-	///////////////////////////////////////////////////////////////////////////////////////////////////
+    
+    deinit {
+        print("Client deinit")
+    }
+
 	
 	var serviceBrowser : NSNetServiceBrowser? = nil
 	var services : [NSNetService] = []
@@ -37,20 +32,15 @@ class BonjourTCPClient : NSObject {
 	var streamsConnectedCallback : (Void -> Void)?
 	
 	func startBrowsingServices() {
-		self.serviceBrowser = NSNetServiceBrowser()
-		self.serviceBrowser?.includesPeerToPeer = true
-		self.serviceBrowser?.delegate = self
-		self.serviceBrowser?.searchForServicesOfType(ZHBonjourTCPServiceName, inDomain: "local")
+		serviceBrowser = NSNetServiceBrowser()
+		serviceBrowser?.includesPeerToPeer = true
+		serviceBrowser?.delegate = self
+		serviceBrowser?.searchForServicesOfType(ZHBonjourTCPServiceName, inDomain: "local")
 	}
 	
 
-
-	///////////////////////////////////////////////////////////////////////////////////////////////////
-	//  MARK: connect to service
-	///////////////////////////////////////////////////////////////////////////////////////////////////
-	
 	func connectTo(service: NSNetService, callback: (Void -> Void)?) {
-		self.streamsConnectedCallback = callback
+		streamsConnectedCallback = callback
 
 		var inputStream : NSInputStream? = nil
 		var outputStream : NSOutputStream? = nil
@@ -58,84 +48,70 @@ class BonjourTCPClient : NSObject {
 		let success = service.getInputStream(&inputStream, outputStream: &outputStream)
 		
 		if !success {
-			return NSLog("could not connect to service")
+			return print("could not connect to service")
 		}
 		self.inputStream  = inputStream
 		self.outputStream = outputStream
 		
-		self.openStreams()
+		openStreams()
 
-		NSLog("connecting...")
+		print("connecting...")
 	}
 	
-    ///////////////////////////////////////////////////////////////////////////////////////////////////
-    //  MARK: send message
-    ///////////////////////////////////////////////////////////////////////////////////////////////////
-    
     func send(message: String) {
-        guard self.openedStreams == 2 else {
-            return NSLog("no open streams \(self.openedStreams)")
+        guard openedStreams == 2 else {
+            return print("no open streams \(openedStreams)")
         }
         
-        guard self.outputStream!.hasSpaceAvailable else {
-            return NSLog("no space available")
+        guard outputStream!.hasSpaceAvailable else {
+            return print("no space available")
         }
         
         let data: NSData = message.dataUsingEncoding(NSUTF8StringEncoding)!
-        let bytesWritten = self.outputStream!.write(UnsafePointer<UInt8>(data.bytes), maxLength: data.length)
+        let bytesWritten = outputStream!.write(UnsafePointer<UInt8>(data.bytes), maxLength: data.length)
         
         guard bytesWritten == data.length else {
-            self.closeStreams()
-            return NSLog("something is wrong...")
+            closeStreams()
+            return print("something is wrong...")
         }
-        NSLog("data written... \(message)")
+        print("data written... \(message)")
     }
     
-    
-	///////////////////////////////////////////////////////////////////////////////////////////////////
-	//  MARK: streams
-	///////////////////////////////////////////////////////////////////////////////////////////////////
-	
-	
 	var inputStream : NSInputStream? = nil
 	var outputStream : NSOutputStream? = nil
 	var openedStreams : Int = 0
 	
 	
 	func openStreams() {
-		guard self.openedStreams == 0 else {
-			return NSLog("streams already opened... \(self.openedStreams)")
+		guard openedStreams == 0 else {
+			return print("streams already opened... \(self.openedStreams)")
 		}
 		
-		self.inputStream?.delegate = self
-		self.inputStream?.scheduleInRunLoop(NSRunLoop.currentRunLoop(), forMode: NSDefaultRunLoopMode)
-		self.inputStream?.open()
+		inputStream?.delegate = self
+		inputStream?.scheduleInRunLoop(NSRunLoop.currentRunLoop(), forMode: NSDefaultRunLoopMode)
+		inputStream?.open()
 		
-		self.outputStream?.delegate = self
-		self.outputStream?.scheduleInRunLoop(NSRunLoop.currentRunLoop(), forMode: NSDefaultRunLoopMode)
-		self.outputStream?.open()
+		outputStream?.delegate = self
+		outputStream?.scheduleInRunLoop(NSRunLoop.currentRunLoop(), forMode: NSDefaultRunLoopMode)
+		outputStream?.open()
 	}
 	
 	
 	func closeStreams() {
-		self.inputStream?.removeFromRunLoop(NSRunLoop.currentRunLoop(), forMode: NSDefaultRunLoopMode)
-		self.inputStream?.close()
-		self.inputStream = nil
+		inputStream?.removeFromRunLoop(NSRunLoop.currentRunLoop(), forMode: NSDefaultRunLoopMode)
+		inputStream?.close()
+		inputStream = nil
 		
-		self.outputStream?.removeFromRunLoop(NSRunLoop.currentRunLoop(), forMode: NSDefaultRunLoopMode)
-		self.outputStream?.close()
-		self.outputStream = nil
+		outputStream?.removeFromRunLoop(NSRunLoop.currentRunLoop(), forMode: NSDefaultRunLoopMode)
+		outputStream?.close()
+		outputStream = nil
 
-		self.streamsConnected = false
-		self.openedStreams = 0
+		streamsConnected = false
+		openedStreams = 0
 	}
 }
 
 extension BonjourTCPClient: NSNetServiceBrowserDelegate {
-    ///////////////////////////////////////////////////////////////////////////////////////////////////
-    //  MARK: browser delegate
-    ///////////////////////////////////////////////////////////////////////////////////////////////////
-    
     func netServiceBrowserWillSearch(browser: NSNetServiceBrowser) {}
     func netServiceBrowserDidStopSearch(browser: NSNetServiceBrowser) {}
     func netServiceBrowser(browser: NSNetServiceBrowser, didNotSearch errorDict: [String : NSNumber]) {}
@@ -144,18 +120,18 @@ extension BonjourTCPClient: NSNetServiceBrowserDelegate {
     
     
     func netServiceBrowser(browser: NSNetServiceBrowser, didFindService service: NSNetService, moreComing: Bool) {
-        NSLog("service found:" + service.name)
-        self.services.append(service)
+        print("service found:" + service.name)
+        services.append(service)
         
         if !moreComing {
-            if let callback = self.servicesCallback {
-                callback(self.services)
+            if let callback = servicesCallback {
+                callback(services)
             }
         }
     }
     
     func netServiceBrowser(browser: NSNetServiceBrowser, didRemoveService service: NSNetService, moreComing: Bool) {
-        NSLog("service removed:" + service.name)
+        print("service removed:" + service.name)
 //        self.services = self.services.filter() { $0 != service }
 //        
 //        if !moreComing {
@@ -171,16 +147,14 @@ extension BonjourTCPClient: NSStreamDelegate {
         switch eventCode {
         case NSStreamEvent.None:
             print("None")
-            break
 
         case NSStreamEvent.OpenCompleted:
-            self.openedStreams++
+            openedStreams++
             
-            break
         case NSStreamEvent.HasBytesAvailable:
             print("HasBytesAvailable")
-            guard let inputStream = self.inputStream else {
-                return NSLog("no input stream")
+            guard let inputStream = inputStream else {
+                return print("no input stream")
             }
             
             let bufferSize     = 4096
@@ -190,41 +164,37 @@ extension BonjourTCPClient: NSStreamDelegate {
             while inputStream.hasBytesAvailable {
                 let len = inputStream.read(&buffer, maxLength: bufferSize)
                 if len < 0 {
-                    NSLog("error reading stream...")
+                    print("error reading stream...")
                     return self.closeStreams()
                 }
+                
                 if len > 0 {
                     message += NSString(bytes: &buffer, length: len, encoding: NSUTF8StringEncoding) as! String
                 }
+                
                 if len == 0 {
-                    NSLog("no more bytes available...")
+                    print("no more bytes available...")
                     break
                 }
             }
             self.dataReceivedCallback?(message)
-            break
 
         case NSStreamEvent.HasSpaceAvailable:
             if self.openedStreams == 2 && !self.streamsConnected {
-                NSLog("streams connected.")
+                print("streams connected.")
                 self.streamsConnected = true
                 self.streamsConnectedCallback?()
             }
-            break
             
         case NSStreamEvent.ErrorOccurred:
             print("ErrorOccurred")
-            break
             
         case NSStreamEvent.EndEncountered:
             print("EndEncountered")
-            break
 
         default:
             break
         }
-        
-        
     }
 }
 
