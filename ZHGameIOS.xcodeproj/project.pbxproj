@@ -24,6 +24,11 @@
 		C696A8C11C1CFC88000333DA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C696A8C01C1CFC88000333DA /* Assets.xcassets */; };
 		C696A8CC1C1CFC88000333DA /* ZHGameTVOSTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C696A8CB1C1CFC88000333DA /* ZHGameTVOSTests.swift */; };
 		C696A8D71C1CFC88000333DA /* ZHGameTVOSUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C696A8D61C1CFC88000333DA /* ZHGameTVOSUITests.swift */; };
+		C69843A81C543DC900481220 /* ZHSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = C69843A71C543DC900481220 /* ZHSession.swift */; };
+		C69843AA1C543FE100481220 /* ZHSessionUserInfoTransfer.swift in Sources */ = {isa = PBXBuildFile; fileRef = C69843A91C543FE100481220 /* ZHSessionUserInfoTransfer.swift */; };
+		C69843AC1C543FF400481220 /* ZHSessionFileTransfer.swift in Sources */ = {isa = PBXBuildFile; fileRef = C69843AB1C543FF400481220 /* ZHSessionFileTransfer.swift */; };
+		C69843AE1C5477E600481220 /* ZHSessionFile.swift in Sources */ = {isa = PBXBuildFile; fileRef = C69843AD1C5477E600481220 /* ZHSessionFile.swift */; };
+		C69843B21C54799500481220 /* ZHSessionClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = C69843B11C54799500481220 /* ZHSessionClient.swift */; };
 		C6F91A0B1C3F3B8900483FAD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6F91A0A1C3F3B8900483FAD /* AppDelegate.swift */; };
 		C6F91A0D1C3F3B8900483FAD /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6F91A0C1C3F3B8900483FAD /* ViewController.swift */; };
 		C6F91A0F1C3F3B8900483FAD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C6F91A0E1C3F3B8900483FAD /* Assets.xcassets */; };
@@ -40,6 +45,7 @@
 		C6F91A441C3F696200483FAD /* ZHBonjourTCP.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6F91A431C3F696200483FAD /* ZHBonjourTCP.swift */; };
 		C6F91A451C3F698100483FAD /* ZHBonjourTCP.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6F91A431C3F696200483FAD /* ZHBonjourTCP.swift */; };
 		C6F91A461C3F698200483FAD /* ZHBonjourTCP.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6F91A431C3F696200483FAD /* ZHBonjourTCP.swift */; };
+		DDBE891D1E49C025024DFBEF /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4FD0A853636346B9C5670B9E /* Pods.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -88,6 +94,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		294369E0729BD0D981F6C62A /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		4FD0A853636346B9C5670B9E /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5101F19F93936F49FC316499 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		C681653E1C1D363A00E026EE /* ZHUser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZHUser.swift; sourceTree = "<group>"; };
 		C68165451C1E024A00E026EE /* ZHUserCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZHUserCollectionViewCell.swift; sourceTree = "<group>"; };
 		C681654A1C1F47D400E026EE /* links.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = links.txt; sourceTree = "<group>"; };
@@ -116,6 +125,11 @@
 		C696A8D21C1CFC88000333DA /* ZHGameTVOSUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ZHGameTVOSUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C696A8D61C1CFC88000333DA /* ZHGameTVOSUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZHGameTVOSUITests.swift; sourceTree = "<group>"; };
 		C696A8D81C1CFC88000333DA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C69843A71C543DC900481220 /* ZHSession.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZHSession.swift; sourceTree = "<group>"; };
+		C69843A91C543FE100481220 /* ZHSessionUserInfoTransfer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZHSessionUserInfoTransfer.swift; sourceTree = "<group>"; };
+		C69843AB1C543FF400481220 /* ZHSessionFileTransfer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZHSessionFileTransfer.swift; sourceTree = "<group>"; };
+		C69843AD1C5477E600481220 /* ZHSessionFile.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZHSessionFile.swift; sourceTree = "<group>"; };
+		C69843B11C54799500481220 /* ZHSessionClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZHSessionClient.swift; sourceTree = "<group>"; };
 		C6F91A081C3F3B8900483FAD /* ZHGameOSX.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ZHGameOSX.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C6F91A0A1C3F3B8900483FAD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C6F91A0C1C3F3B8900483FAD /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -138,6 +152,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DDBE891D1E49C025024DFBEF /* Pods.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -200,6 +215,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4628D3F9D2C9E431A5AB82CC /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				5101F19F93936F49FC316499 /* Pods.debug.xcconfig */,
+				294369E0729BD0D981F6C62A /* Pods.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		875AE3B8453FFDAC339CD08B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				4FD0A853636346B9C5670B9E /* Pods.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		C68165401C1DFF7B00E026EE /* Networking */ = {
 			isa = PBXGroup;
 			children = (
@@ -207,6 +239,11 @@
 				C6F91A3B1C3F662000483FAD /* ZHBonjourTCPServer.swift */,
 				C6F91A3C1C3F662000483FAD /* ZHBonjourTCPClient.swift */,
 				C681654A1C1F47D400E026EE /* links.txt */,
+				C69843A71C543DC900481220 /* ZHSession.swift */,
+				C69843A91C543FE100481220 /* ZHSessionUserInfoTransfer.swift */,
+				C69843AB1C543FF400481220 /* ZHSessionFileTransfer.swift */,
+				C69843AD1C5477E600481220 /* ZHSessionFile.swift */,
+				C69843B11C54799500481220 /* ZHSessionClient.swift */,
 			);
 			name = Networking;
 			sourceTree = "<group>";
@@ -233,6 +270,8 @@
 				C6F91A1B1C3F3B8A00483FAD /* ZHGameOSXTests */,
 				C6F91A261C3F3B8A00483FAD /* ZHGameOSXUITests */,
 				C696A8831C1CFC75000333DA /* Products */,
+				4628D3F9D2C9E431A5AB82CC /* Pods */,
+				875AE3B8453FFDAC339CD08B /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -360,9 +399,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = C696A8AA1C1CFC75000333DA /* Build configuration list for PBXNativeTarget "ZHGameIOS" */;
 			buildPhases = (
+				ACDFF8369C0D2E5F67A279D7 /* Check Pods Manifest.lock */,
 				C696A87E1C1CFC75000333DA /* Sources */,
 				C696A87F1C1CFC75000333DA /* Frameworks */,
 				C696A8801C1CFC75000333DA /* Resources */,
+				93FB38BF61CA393F2EBF245C /* Embed Pods Frameworks */,
+				6E1ED0CEDE0D6EF7974FEFCC /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -660,16 +702,69 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		6E1ED0CEDE0D6EF7974FEFCC /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		93FB38BF61CA393F2EBF245C /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		ACDFF8369C0D2E5F67A279D7 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		C696A87E1C1CFC75000333DA /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C69843AA1C543FE100481220 /* ZHSessionUserInfoTransfer.swift in Sources */,
+				C69843AC1C543FF400481220 /* ZHSessionFileTransfer.swift in Sources */,
 				C6F91A3E1C3F662000483FAD /* ZHBonjourTCPClient.swift in Sources */,
 				C696A8881C1CFC75000333DA /* ViewController.swift in Sources */,
+				C69843B21C54799500481220 /* ZHSessionClient.swift in Sources */,
 				C681653F1C1D363A00E026EE /* ZHUser.swift in Sources */,
 				C6F91A441C3F696200483FAD /* ZHBonjourTCP.swift in Sources */,
 				C696A8861C1CFC75000333DA /* AppDelegate.swift in Sources */,
+				C69843A81C543DC900481220 /* ZHSession.swift in Sources */,
+				C69843AE1C5477E600481220 /* ZHSessionFile.swift in Sources */,
 				C6F91A3D1C3F662000483FAD /* ZHBonjourTCPServer.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -905,6 +1000,7 @@
 		};
 		C696A8AB1C1CFC75000333DA /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5101F19F93936F49FC316499 /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = ZHGameIOS/Info.plist;
@@ -917,6 +1013,7 @@
 		};
 		C696A8AC1C1CFC75000333DA /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 294369E0729BD0D981F6C62A /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = ZHGameIOS/Info.plist;
@@ -1228,6 +1325,7 @@
 				C6F91A2B1C3F3B8A00483FAD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		C6F91A311C3F3B8A00483FAD /* Build configuration list for PBXNativeTarget "ZHGameOSXTests" */ = {
 			isa = XCConfigurationList;
@@ -1236,6 +1334,7 @@
 				C6F91A2D1C3F3B8A00483FAD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		C6F91A321C3F3B8A00483FAD /* Build configuration list for PBXNativeTarget "ZHGameOSXUITests" */ = {
 			isa = XCConfigurationList;
@@ -1244,6 +1343,7 @@
 				C6F91A2F1C3F3B8A00483FAD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
